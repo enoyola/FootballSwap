@@ -3,6 +3,12 @@
 StickerMatch is a native **iOS** (Swift/SwiftUI/MVVM) fan utility for completing a physical
 football sticker album, backed by **Supabase**. This file is the working guide for the repo.
 
+**Naming:** the **user-facing app name is "FootballSwap"** (display name, login title, safety
+disclaimer, location prompt). The Xcode project/target, scheme, source folder, `@main` struct
+(`StickerMatchApp`), and bundle id (`com.stickermatch.app` + `stickermatch://` scheme) all stay
+**StickerMatch** — so build/deploy commands and OAuth redirects are unchanged. The repo lives on
+GitHub (public) at **`enoyola/FootballSwap`**.
+
 ## Hard product constraints (do not violate)
 - **Not an official app.** No FIFA / Panini / World Cup logos, player images, sticker artwork,
   or reproduction of an official album's numbering/compilation.

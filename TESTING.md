@@ -52,6 +52,10 @@ Backend checks use the Supabase MCP (`execute_sql`, `get_advisors`, `get_logs`).
 - **`simctl` location grant is unreliable** → reset + let the in-app prompt grant, then `location set`.
 - **Distance is from device GPS, not profile city.** The profile city/country is the no-location fallback.
 - Catalog count is **442** (not the original 30 sample).
+- **App-name split:** the on-device display name is **FootballSwap**, but the scheme, product
+  (`StickerMatch.app`), and bundle id (`com.stickermatch.app`) are still StickerMatch — the build/
+  deploy commands above are unchanged. The FootballSwap display name **and** the login buttons
+  (native black Apple + compliant Google "G" card) are **confirmed on a rebuilt sim app**.
 
 ## Suggested next tests (not yet done)
 - XCTest unit tests for `MatchService` intersection/scoring and `AlbumViewModel.setCopies` mapping.

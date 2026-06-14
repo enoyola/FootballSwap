@@ -5,6 +5,11 @@ _Last updated: 2026-06-14_
 Native iOS (Swift/SwiftUI/MVVM) sticker-album + trading app on Supabase. Built end-to-end this
 session from two prompt specs. **Feature-complete MVP**; remaining work is App Store gating.
 
+**Repo:** now under git and pushed to GitHub (public) at `enoyola/FootballSwap`.
+**Naming:** user-facing app name is **FootballSwap** (display name, login title, disclaimer,
+location prompt); the Xcode project/target, source folder, and bundle id (`com.stickermatch.app`)
+stay **StickerMatch** internally — build/deploy commands and OAuth redirects unchanged.
+
 ## Backend (Supabase project `hyfrnjtbcnlrwkwwjpbx`)
 
 SQL files applied via MCP migrations and mirrored in `supabase/`:
