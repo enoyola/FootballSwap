@@ -1,0 +1,111 @@
+Now build the native iOS MVP using Swift, SwiftUI, and MVVM.
+
+App name: StickerMatch
+
+Core screens:
+
+1. Login Screen
+
+* App name: StickerMatch
+* Subtitle: “Complete your album faster. Find people nearby who have the stickers you need.”
+* Login with Google if possible through Supabase Auth
+* Add Apple Sign-In support or placeholder if needed
+* Continue only after authentication
+
+2. My Album Screen
+
+* Search by sticker number or player name
+* Show sticker/card list
+* Each item shows:
+
+  * sticker number
+  * player/name text
+  * country/team/category text
+  * status: missing, have, repeated
+  * repeated quantity if repeated
+* User can quickly change status
+* User can increase/decrease repeated quantity
+
+3. Missing List Screen
+
+* Shows only stickers marked as missing
+
+4. Repeated List Screen
+
+* Shows only stickers marked as repeated
+* Shows quantity
+
+5. Marketplace Screen
+
+* Shows active public posts
+* Filter by city
+* Search by sticker number
+* Each post shows:
+
+  * nickname
+  * city
+  * meeting point
+  * repeated stickers
+  * missing stickers
+  * price/trade note
+  * contact method
+  * created date
+  * safety disclaimer
+
+6. Create/Edit Post Screen
+
+* Auto-load the user’s repeated list and missing list
+* User enters city, meeting point, price/trade note, and contact method
+* Post expires after 7 days
+* User can edit/delete only their own posts
+
+7. Matches Screen
+
+* Show users/posts where:
+
+  * They have stickers I’m missing
+  * I have stickers they’re missing
+* Display:
+
+  * “They have X stickers you need”
+  * “You have Y stickers they need”
+  * “Possible trade score: X + Y”
+* Sort by highest match score
+* Show exact sticker numbers that both sides can trade
+
+8. Profile Screen
+
+* nickname
+* city
+* preferred meeting point
+* contact method
+* delete account placeholder
+
+Technical requirements:
+
+* SwiftUI
+* MVVM
+* Async/await where appropriate
+* Supabase client integration
+* Environment configuration for Supabase URL and anon key
+* Loading states
+* Empty states
+* Error handling
+* Clean, simple mobile UI
+* No copyrighted images or logos
+* No payments
+* No maps
+* No chat
+
+Seed data:
+Create a small sample album with 30 generic sticker/card records using plain text names. Make it easy to replace later with a CSV.
+
+Deliver:
+
+* Full file structure
+* Swift models
+* ViewModels
+* Supabase service layer
+* Views
+* README with setup instructions
+

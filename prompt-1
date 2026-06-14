@@ -1,0 +1,36 @@
+We are building a native mobile app MVP called StickerMatch.
+
+The product:
+StickerMatch is a temporary fan utility app for people completing a physical football sticker/card album. Users manually track which stickers/cards they have, which ones they are missing, and which ones they have repeated. Users can publish their repeated/missing stickers so other people nearby can find possible trades.
+
+Important constraints:
+
+* This is not an official app.
+* Do not use FIFA, Panini, World Cup, team logos, player images, sticker images, official album artwork, or copyrighted visual assets.
+* Use only plain text: sticker/card number, player name, country/team text, and category.
+* No payments.
+* No maps for MVP.
+* No in-app chat for MVP.
+* Users can add a preferred contact method such as WhatsApp, but the app should not send automated WhatsApp messages.
+* Add safety disclaimer: “Meet only in public places. StickerMatch does not process payments, verify users, or guarantee trades.”
+
+Architecture:
+
+* Native iOS app: Swift + SwiftUI
+* Native Android app later: Kotlin + Jetpack Compose
+* Shared backend: Supabase
+* Database: Supabase Postgres
+* Auth: Supabase Auth
+* Use Row Level Security policies
+* Keep the app simple and MVP-focused
+
+Before coding:
+
+1. Propose the Supabase database schema.
+2. Propose RLS policies.
+3. Propose the iOS SwiftUI architecture using MVVM.
+4. Propose the Android architecture using Kotlin + Jetpack Compose for later.
+5. Propose the matching algorithm.
+6. Propose the smallest MVP.
+7. Do not overengineer.
+

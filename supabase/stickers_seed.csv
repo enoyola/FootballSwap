@@ -1,0 +1,443 @@
+number,player_name,team_text,category
+001,Rayan Ait-Nouri,Algeria,CAF
+002,Riyad Mahrez,Algeria,CAF
+003,Ramy Bensebaini,Algeria,CAF
+004,Youcef Atal,Algeria,CAF
+005,Aissa Mandi,Algeria,CAF
+006,Nabil Bentaleb,Algeria,CAF
+007,Said Benrahma,Algeria,CAF
+008,Amine Gouiri,Algeria,CAF
+009,Mohamed Amoura,Algeria,CAF
+010,Baghdad Bounedjah,Algeria,CAF
+011,Julian Alvarez,Argentina,CONMEBOL
+012,Lionel Messi,Argentina,CONMEBOL
+013,Emiliano Martinez,Argentina,CONMEBOL
+014,Nahuel Molina,Argentina,CONMEBOL
+015,Cristian Romero,Argentina,CONMEBOL
+016,Nicolas Otamendi,Argentina,CONMEBOL
+017,Enzo Fernandez,Argentina,CONMEBOL
+018,Alexis Mac Allister,Argentina,CONMEBOL
+019,Rodrigo De Paul,Argentina,CONMEBOL
+020,Lautaro Martinez,Argentina,CONMEBOL
+021,Harry Souttar,Australia,AFC
+022,Mathew Ryan,Australia,AFC
+023,Alessandro Circati,Australia,AFC
+024,Jordan Bos,Australia,AFC
+025,Jackson Irvine,Australia,AFC
+026,Riley McGree,Australia,AFC
+027,Aiden O'Neill,Australia,AFC
+028,Connor Metcalfe,Australia,AFC
+029,Craig Goodwin,Australia,AFC
+030,Milos Degenek,Australia,AFC
+031,Marko Arnautovic,Austria,UEFA
+032,David Alaba,Austria,UEFA
+033,Alexander Schlager,Austria,UEFA
+034,Kevin Danso,Austria,UEFA
+035,Philipp Lienhart,Austria,UEFA
+036,Konrad Laimer,Austria,UEFA
+037,Nicolas Seiwald,Austria,UEFA
+038,Marcel Sabitzer,Austria,UEFA
+039,Christoph Baumgartner,Austria,UEFA
+040,Michael Gregoritsch,Austria,UEFA
+041,Youri Tielemans,Belgium,UEFA
+042,Kevin De Bruyne,Belgium,UEFA
+043,Thibaut Courtois,Belgium,UEFA
+044,Arthur Theate,Belgium,UEFA
+045,Timothy Castagne,Belgium,UEFA
+046,Maxim De Cuyper,Belgium,UEFA
+047,Amadou Onana,Belgium,UEFA
+048,Jeremy Doku,Belgium,UEFA
+049,Charles De Ketelaere,Belgium,UEFA
+050,Leandro Trossard,Belgium,UEFA
+051,Romelu Lukaku,Belgium,UEFA
+052,Marquinhos,Brazil,CONMEBOL
+053,Vinicius Junior,Brazil,CONMEBOL
+054,Alisson,Brazil,CONMEBOL
+055,Danilo,Brazil,CONMEBOL
+056,Eder Militao,Brazil,CONMEBOL
+057,Gabriel Magalhaes,Brazil,CONMEBOL
+058,Casemiro,Brazil,CONMEBOL
+059,Bruno Guimaraes,Brazil,CONMEBOL
+060,Rodrygo,Brazil,CONMEBOL
+061,Matheus Cunha,Brazil,CONMEBOL
+062,Raphinha,Brazil,CONMEBOL
+063,Jonathan David,Canada,CONCACAF
+064,Alphonso Davies,Canada,CONCACAF
+065,Dayne St. Clair,Canada,CONCACAF
+066,Derek Cornelius,Canada,CONCACAF
+067,Stephen Eustaquio,Canada,CONCACAF
+068,Ismael Kone,Canada,CONCACAF
+069,Jonathan Osorio,Canada,CONCACAF
+070,Jacob Shaffelburg,Canada,CONCACAF
+071,Tajon Buchanan,Canada,CONCACAF
+072,Cyle Larin,Canada,CONCACAF
+073,Ryan Mendes,Cape Verde,CAF
+074,Logan Costa,Cape Verde,CAF
+075,Vozinha,Cape Verde,CAF
+076,Steven Moreira,Cape Verde,CAF
+077,Joao Paulo,Cape Verde,CAF
+078,Kevin Pina,Cape Verde,CAF
+079,Jamiro Monteiro,Cape Verde,CAF
+080,Yannick Semedo,Cape Verde,CAF
+081,Jovane Cabral,Cape Verde,CAF
+082,Dailon Livramento,Cape Verde,CAF
+083,Luis Diaz,Colombia,CONMEBOL
+084,James Rodriguez,Colombia,CONMEBOL
+085,Camilo Vargas,Colombia,CONMEBOL
+086,Davinson Sanchez,Colombia,CONMEBOL
+087,Yerry Mina,Colombia,CONMEBOL
+088,Daniel Munoz,Colombia,CONMEBOL
+089,Jefferson Lerma,Colombia,CONMEBOL
+090,Richard Rios,Colombia,CONMEBOL
+091,Juan Fernando Quintero,Colombia,CONMEBOL
+092,Jhon Arias,Colombia,CONMEBOL
+093,Luis Suarez,Colombia,CONMEBOL
+094,Ivan Perisic,Croatia,UEFA
+095,Luka Modric,Croatia,UEFA
+096,Dominik Livakovic,Croatia,UEFA
+097,Duje Caleta-Car,Croatia,UEFA
+098,Josko Gvardiol,Croatia,UEFA
+099,Josip Stanisic,Croatia,UEFA
+100,Mateo Kovacic,Croatia,UEFA
+101,Lovro Majer,Croatia,UEFA
+102,Mario Pasalic,Croatia,UEFA
+103,Ante Budimir,Croatia,UEFA
+104,Andrej Kramaric,Croatia,UEFA
+105,Leandro Bacuna,Curacao,CONCACAF
+106,Eloy Room,Curacao,CONCACAF
+107,Sherel Floranus,Curacao,CONCACAF
+108,Armando Obispo,Curacao,CONCACAF
+109,Livano Comenencia,Curacao,CONCACAF
+110,Juninho Bacuna,Curacao,CONCACAF
+111,Kenji Gorre,Curacao,CONCACAF
+112,Sontje Hansen,Curacao,CONCACAF
+113,Jearl Margaritha,Curacao,CONCACAF
+114,Roshon van Eijma,Curacao,CONCACAF
+115,Moises Caicedo,Ecuador,CONMEBOL
+116,Enner Valencia,Ecuador,CONMEBOL
+117,Hernan Galindez,Ecuador,CONMEBOL
+118,Piero Hincapie,Ecuador,CONMEBOL
+119,Pervis Estupinan,Ecuador,CONMEBOL
+120,Willian Pacho,Ecuador,CONMEBOL
+121,Angelo Preciado,Ecuador,CONMEBOL
+122,Joel Ordonez,Ecuador,CONMEBOL
+123,Alan Franco,Ecuador,CONMEBOL
+124,Gonzalo Plata,Ecuador,CONMEBOL
+125,Kendry Paez,Ecuador,CONMEBOL
+126,Omar Marmoush,Egypt,CAF
+127,Mohamed Salah,Egypt,CAF
+128,Mohamed El Shenawy,Egypt,CAF
+129,Mohamed Hany,Egypt,CAF
+130,Mohamed Abdelmonem,Egypt,CAF
+131,Ramy Rabia,Egypt,CAF
+132,Marwan Attia,Egypt,CAF
+133,Zizo,Egypt,CAF
+134,Hamdy Fathy,Egypt,CAF
+135,Mostafa Mohamed,Egypt,CAF
+136,Trezeguet,Egypt,CAF
+137,Jude Bellingham,England,UEFA
+138,Harry Kane,England,UEFA
+139,Jordan Pickford,England,UEFA
+140,Reece James,England,UEFA
+141,John Stones,England,UEFA
+142,Declan Rice,England,UEFA
+143,Jordan Henderson,England,UEFA
+144,Phil Foden,England,UEFA
+145,Bukayo Saka,England,UEFA
+146,Cole Palmer,England,UEFA
+147,Marcus Rashford,England,UEFA
+148,Ousmane Dembele,France,UEFA
+149,Kylian Mbappe,France,UEFA
+150,Mike Maignan,France,UEFA
+151,William Saliba,France,UEFA
+152,Jules Kounde,France,UEFA
+153,Theo Hernandez,France,UEFA
+154,Aurelien Tchouameni,France,UEFA
+155,Eduardo Camavinga,France,UEFA
+156,Bradley Barcola,France,UEFA
+157,Marcus Thuram,France,UEFA
+158,Randal Kolo Muani,France,UEFA
+159,Jamal Musiala,Germany,UEFA
+160,Joshua Kimmich,Germany,UEFA
+161,Marc-Andre ter Stegen,Germany,UEFA
+162,Antonio Rudiger,Germany,UEFA
+163,Jonathan Tah,Germany,UEFA
+164,Felix Nmecha,Germany,UEFA
+165,Leon Goretzka,Germany,UEFA
+166,Florian Wirtz,Germany,UEFA
+167,Serge Gnabry,Germany,UEFA
+168,Kai Havertz,Germany,UEFA
+169,Leroy Sane,Germany,UEFA
+170,Thomas Partey,Ghana,CAF
+171,Mohammed Kudus,Ghana,CAF
+172,Lawrence Ati-Zigi,Ghana,CAF
+173,Alidu Seidu,Ghana,CAF
+174,Alexander Djiku,Ghana,CAF
+175,Gideon Mensah,Ghana,CAF
+176,Fatawu Issahaku,Ghana,CAF
+177,Kamaldeen Sulemana,Ghana,CAF
+178,Jordan Ayew,Ghana,CAF
+179,Antoine Semenyo,Ghana,CAF
+180,Frantzdy Pierrot,Haiti,CONCACAF
+181,Duckens Nazon,Haiti,CONCACAF
+182,Johnny Placide,Haiti,CONCACAF
+183,Ricardo Ade,Haiti,CONCACAF
+184,Carlens Arcus,Haiti,CONCACAF
+185,Hannes Delcroix,Haiti,CONCACAF
+186,Danley Jean-Jacques,Haiti,CONCACAF
+187,Jean-Ricner Bellegarde,Haiti,CONCACAF
+188,Ruben Providence,Haiti,CONCACAF
+189,Don Deedson Louicius,Haiti,CONCACAF
+190,Mehdi Taremi,Iran,AFC
+191,Sardar Azmoun,Iran,AFC
+192,Alireza Beiranvand,Iran,AFC
+193,Shojae Khalilzadeh,Iran,AFC
+194,Milad Mohammadi,Iran,AFC
+195,Ramin Rezaeian,Iran,AFC
+196,Saeed Ezatolahi,Iran,AFC
+197,Saman Ghoddos,Iran,AFC
+198,Mohammad Mohebi,Iran,AFC
+199,Alireza Jahanbakhsh,Iran,AFC
+200,Franck Kessie,Ivory Coast,CAF
+201,Sebastien Haller,Ivory Coast,CAF
+202,Yahia Fofana,Ivory Coast,CAF
+203,Ghislain Konan,Ivory Coast,CAF
+204,Odilon Kossounou,Ivory Coast,CAF
+205,Evan Ndicka,Ivory Coast,CAF
+206,Wilfried Singo,Ivory Coast,CAF
+207,Ibrahim Sangare,Ivory Coast,CAF
+208,Nicolas Pepe,Ivory Coast,CAF
+209,Simon Adingra,Ivory Coast,CAF
+210,Amad Diallo,Ivory Coast,CAF
+211,Takumi Minamino,Japan,AFC
+212,Takefusa Kubo,Japan,AFC
+213,Zion Suzuki,Japan,AFC
+214,Tsuyoshi Watanabe,Japan,AFC
+215,Kaishu Sano,Japan,AFC
+216,Ao Tanaka,Japan,AFC
+217,Daichi Kamada,Japan,AFC
+218,Ritsu Doan,Japan,AFC
+219,Keito Nakamura,Japan,AFC
+220,Shuto Machino,Japan,AFC
+221,Ayase Ueda,Japan,AFC
+222,Yazan Al-Naimat,Jordan,AFC
+223,Musa Al-Taamari,Jordan,AFC
+224,Yazeed Abulaila,Jordan,AFC
+225,Mohammad Abu Hashish,Jordan,AFC
+226,Yazan Al-Arab,Jordan,AFC
+227,Abdallah Nasib,Jordan,AFC
+228,Ibrahim Saadeh,Jordan,AFC
+229,Nizar Al-Rashdan,Jordan,AFC
+230,Noor Al-Rawabdeh,Jordan,AFC
+231,Ali Olwan,Jordan,AFC
+232,Minjae Kim,Korea Republic,AFC
+233,Heungmin Son,Korea Republic,AFC
+234,Hyeonwoo Jo,Korea Republic,AFC
+235,Youngwoo Seol,Korea Republic,AFC
+236,Taeseok Lee,Korea Republic,AFC
+237,Inseong Hwang,Korea Republic,AFC
+238,Jaesung Lee,Korea Republic,AFC
+239,Kangin Lee,Korea Republic,AFC
+240,Heechan Hwang,Korea Republic,AFC
+241,Edson Alvarez,Mexico,CONCACAF
+242,Raul Jimenez,Mexico,CONCACAF
+243,Luis Malagon,Mexico,CONCACAF
+244,Israel Reyes,Mexico,CONCACAF
+245,Johan Vasquez,Mexico,CONCACAF
+246,Cesar Montes,Mexico,CONCACAF
+247,Jorge Sanchez,Mexico,CONCACAF
+248,Carlos Rodriguez,Mexico,CONCACAF
+249,Orbelin Pineda,Mexico,CONCACAF
+250,Hirving Lozano,Mexico,CONCACAF
+251,Santiago Gimenez,Mexico,CONCACAF
+252,Youssef En-Nesyri,Morocco,CAF
+253,Achraf Hakimi,Morocco,CAF
+254,Yassine Bounou,Morocco,CAF
+255,Noussair Mazraoui,Morocco,CAF
+256,Nayef Aguerd,Morocco,CAF
+257,Sofyan Amrabat,Morocco,CAF
+258,Eliesse Ben Seghir,Morocco,CAF
+259,Ismael Saibari,Morocco,CAF
+260,Brahim Diaz,Morocco,CAF
+261,Abde Ezzalzouli,Morocco,CAF
+262,Ayoub El Kaabi,Morocco,CAF
+263,Memphis Depay,Netherlands,UEFA
+264,Virgil van Dijk,Netherlands,UEFA
+265,Bart Verbruggen,Netherlands,UEFA
+266,Nathan Ake,Netherlands,UEFA
+267,Jeremie Frimpong,Netherlands,UEFA
+268,Denzel Dumfries,Netherlands,UEFA
+269,Tijjani Reijnders,Netherlands,UEFA
+270,Ryan Gravenberch,Netherlands,UEFA
+271,Cody Gakpo,Netherlands,UEFA
+272,Donyell Malen,Netherlands,UEFA
+273,Wout Weghorst,Netherlands,UEFA
+274,Chris Wood,New Zealand,OFC
+275,Marko Stamenic,New Zealand,OFC
+276,Max Crocombe,New Zealand,OFC
+277,Michael Boxall,New Zealand,OFC
+278,Liberato Cacace,New Zealand,OFC
+279,Tim Payne,New Zealand,OFC
+280,Finn Surman,New Zealand,OFC
+281,Sarpreet Singh,New Zealand,OFC
+282,Matthew Garbett,New Zealand,OFC
+283,Elijah Just,New Zealand,OFC
+284,Martin Odegaard,Norway,UEFA
+285,Erling Haaland,Norway,UEFA
+286,Orjan Nyland,Norway,UEFA
+287,Julian Ryerson,Norway,UEFA
+288,Kristoffer Ajer,Norway,UEFA
+289,David Moller Wolfe,Norway,UEFA
+290,Sander Berge,Norway,UEFA
+291,Patrick Berg,Norway,UEFA
+292,Antonio Nusa,Norway,UEFA
+293,Oscar Bobb,Norway,UEFA
+294,Alexander Sorloth,Norway,UEFA
+295,Michael Amir Murillo,Panama,CONCACAF
+296,Anibal Godoy,Panama,CONCACAF
+297,Orlando Mosquera,Panama,CONCACAF
+298,Andres Andrade,Panama,CONCACAF
+299,Fidel Escobar,Panama,CONCACAF
+300,Cristian Martinez,Panama,CONCACAF
+301,Adalberto Carrasquilla,Panama,CONCACAF
+302,Edgar Barcenas,Panama,CONCACAF
+303,Jose Fajardo,Panama,CONCACAF
+304,Ismael Diaz,Panama,CONCACAF
+305,Jose Luis Rodriguez,Panama,CONCACAF
+306,Gustavo Gomez,Paraguay,CONMEBOL
+307,Miguel Almiron,Paraguay,CONMEBOL
+308,Roberto Fernandez,Paraguay,CONMEBOL
+309,Juan Jose Caceres,Paraguay,CONMEBOL
+310,Omar Alderete,Paraguay,CONMEBOL
+311,Junior Alonso,Paraguay,CONMEBOL
+312,Andres Cubas,Paraguay,CONMEBOL
+313,Mathias Villasanti,Paraguay,CONMEBOL
+314,Julio Enciso,Paraguay,CONMEBOL
+315,Ramon Sosa,Paraguay,CONMEBOL
+316,Antonio Sanabria,Paraguay,CONMEBOL
+317,Vitinha,Portugal,UEFA
+318,Cristiano Ronaldo,Portugal,UEFA
+319,Diogo Costa,Portugal,UEFA
+320,Ruben Dias,Portugal,UEFA
+321,Nuno Mendes,Portugal,UEFA
+322,Bernardo Silva,Portugal,UEFA
+323,Bruno Fernandes,Portugal,UEFA
+324,Ruben Neves,Portugal,UEFA
+325,Francisco Conceicao,Portugal,UEFA
+326,Pedro Neto,Portugal,UEFA
+327,Rafael Leao,Portugal,UEFA
+328,Almoez Ali,Qatar,AFC
+329,Hasan Al-Haydos,Qatar,AFC
+330,Meshaal Barsham,Qatar,AFC
+331,Boualem Khoukhi,Qatar,AFC
+332,Lucas Mendes,Qatar,AFC
+333,Pedro Miguel,Qatar,AFC
+334,Homam Al-Amin,Qatar,AFC
+335,Ahmed Fatehi,Qatar,AFC
+336,Akram Afif,Qatar,AFC
+337,Ismaeel Mohammad,Qatar,AFC
+338,Firas Al-Buraikan,Saudi Arabia,AFC
+339,Salem Al-Dawsari,Saudi Arabia,AFC
+340,Nawaf Al-Aqidi,Saudi Arabia,AFC
+341,Hassan Al-Tambakti,Saudi Arabia,AFC
+342,Saud Abdulhamid,Saudi Arabia,AFC
+343,Nasser Al-Dawsari,Saudi Arabia,AFC
+344,Abdullah Al-Khaibari,Saudi Arabia,AFC
+345,Musab Al-Juwayr,Saudi Arabia,AFC
+346,Saleh Al-Shehri,Saudi Arabia,AFC
+347,Sami Al-Najei,Saudi Arabia,AFC
+348,Scott McTominay,Scotland,UEFA
+349,Andrew Robertson,Scotland,UEFA
+350,Angus Gunn,Scotland,UEFA
+351,Kieran Tierney,Scotland,UEFA
+352,Grant Hanley,Scotland,UEFA
+353,Billy Gilmour,Scotland,UEFA
+354,Lewis Ferguson,Scotland,UEFA
+355,Ryan Christie,Scotland,UEFA
+356,John McGinn,Scotland,UEFA
+357,Ben Doak,Scotland,UEFA
+358,Che Adams,Scotland,UEFA
+359,Kalidou Koulibaly,Senegal,CAF
+360,Sadio Mane,Senegal,CAF
+361,Edouard Mendy,Senegal,CAF
+362,Moussa Niakhate,Senegal,CAF
+363,El Hadji Malick Diouf,Senegal,CAF
+364,Idrissa Gana Gueye,Senegal,CAF
+365,Pape Matar Sarr,Senegal,CAF
+366,Iliman Ndiaye,Senegal,CAF
+367,Krepin Diatta,Senegal,CAF
+368,Ismaila Sarr,Senegal,CAF
+369,Nicolas Jackson,Senegal,CAF
+370,Lyle Foster,South Africa,CAF
+371,Ronwen Williams,South Africa,CAF
+372,Siyabonga Ngezana,South Africa,CAF
+373,Aubrey Modiba,South Africa,CAF
+374,Khuliso Mudau,South Africa,CAF
+375,Teboho Mokoena,South Africa,CAF
+376,Themba Zwane,South Africa,CAF
+377,Oswin Appollis,South Africa,CAF
+378,Iqraam Rayners,South Africa,CAF
+379,Percy Tau,South Africa,CAF
+380,Lamine Yamal,Spain,UEFA
+381,Rodri,Spain,UEFA
+382,Unai Simon,Spain,UEFA
+383,Robin Le Normand,Spain,UEFA
+384,Dean Huijsen,Spain,UEFA
+385,Marc Cucurella,Spain,UEFA
+386,Martin Zubimendi,Spain,UEFA
+387,Pedri,Spain,UEFA
+388,Fabian Ruiz,Spain,UEFA
+389,Nico Williams,Spain,UEFA
+390,Mikel Oyarzabal,Spain,UEFA
+391,Manuel Akanji,Switzerland,UEFA
+392,Granit Xhaka,Switzerland,UEFA
+393,Gregor Kobel,Switzerland,UEFA
+394,Nico Elvedi,Switzerland,UEFA
+395,Ricardo Rodriguez,Switzerland,UEFA
+396,Silvan Widmer,Switzerland,UEFA
+397,Remo Freuler,Switzerland,UEFA
+398,Breel Embolo,Switzerland,UEFA
+399,Ruben Vargas,Switzerland,UEFA
+400,Dan Ndoye,Switzerland,UEFA
+401,Ellyes Skhiri,Tunisia,CAF
+402,Aymen Dahmen,Tunisia,CAF
+403,Montassar Talbi,Tunisia,CAF
+404,Yassine Meriah,Tunisia,CAF
+405,Ali Abdi,Tunisia,CAF
+406,Aissa Laidouni,Tunisia,CAF
+407,Hannibal Mejbri,Tunisia,CAF
+408,Naim Sliti,Tunisia,CAF
+409,Elias Achouri,Tunisia,CAF
+410,Ferjani Sassi,Tunisia,CAF
+411,Weston McKennie,United States,CONCACAF
+412,Christian Pulisic,United States,CONCACAF
+413,Matt Freese,United States,CONCACAF
+414,Chris Richards,United States,CONCACAF
+415,Tim Ream,United States,CONCACAF
+416,Antonee Robinson,United States,CONCACAF
+417,Tanner Tessmann,United States,CONCACAF
+418,Tyler Adams,United States,CONCACAF
+419,Timothy Weah,United States,CONCACAF
+420,Malik Tillman,United States,CONCACAF
+421,Folarin Balogun,United States,CONCACAF
+422,Jose Maria Gimenez,Uruguay,CONMEBOL
+423,Federico Valverde,Uruguay,CONMEBOL
+424,Sergio Rochet,Uruguay,CONMEBOL
+425,Ronald Araujo,Uruguay,CONMEBOL
+426,Sebastian Caceres,Uruguay,CONMEBOL
+427,Mathias Olivera,Uruguay,CONMEBOL
+428,Nahitan Nandez,Uruguay,CONMEBOL
+429,Rodrigo Bentancur,Uruguay,CONMEBOL
+430,Manuel Ugarte,Uruguay,CONMEBOL
+431,Facundo Pellistri,Uruguay,CONMEBOL
+432,Darwin Nunez,Uruguay,CONMEBOL
+433,Abdukodir Khusanov,Uzbekistan,AFC
+434,Eldor Shomurodov,Uzbekistan,AFC
+435,Utkir Yusupov,Uzbekistan,AFC
+436,Farrukh Sayfiev,Uzbekistan,AFC
+437,Sherzod Nasrullaev,Uzbekistan,AFC
+438,Husniddin Aliqulov,Uzbekistan,AFC
+439,Rustam Ashurmatov,Uzbekistan,AFC
+440,Khojiakbar Alijonov,Uzbekistan,AFC
+441,Otabek Shukurov,Uzbekistan,AFC
+442,Abbosbek Fayzullaev,Uzbekistan,AFC
