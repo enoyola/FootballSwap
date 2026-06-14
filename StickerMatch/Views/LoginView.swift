@@ -16,7 +16,7 @@ struct LoginView: View {
                     .frame(width: 104, height: 104)
                     .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
                     .shadow(color: .black.opacity(0.3), radius: 10, y: 5)
-                Text("StickerMatch")
+                Text("FootballSwap")
                     .font(.largeTitle.bold())
                 Text("Complete your album faster. Find people nearby who have the stickers you need.")
                     .font(.callout)
