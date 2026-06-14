@@ -35,19 +35,31 @@ struct LoginView: View {
                 }
                 .signInWithAppleButtonStyle(.black)
                 .frame(height: 50)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
 
                 Button {
                     auth.signInWithGoogle()
                 } label: {
-                    HStack {
-                        Image(systemName: "globe")
+                    HStack(spacing: 12) {
+                        Image("GoogleG")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 18, height: 18)
                         Text("Continue with Google")
                             .fontWeight(.semibold)
+                            .foregroundStyle(.primary)
                     }
                     .frame(maxWidth: .infinity, minHeight: 50)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(Color(.secondarySystemGroupedBackground))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .stroke(Color(.separator), lineWidth: 0.5)
+                    )
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(.plain)
 
                 if auth.isLoading {
                     ProgressView().padding(.top, 4)
