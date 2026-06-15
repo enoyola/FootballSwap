@@ -22,6 +22,15 @@ struct MarketplaceView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            ScreenHeader("Marketplace") {
+                HStack(spacing: 18) {
+                    Button { showMyPosts = true } label: { Image(systemName: "rectangle.stack") }
+                    Button { editorTarget = .new } label: { Image(systemName: "plus") }
+                }
+                .font(.title3)
+                .tint(.primary)
+            }
+            SearchField(prompt: "Search sticker number", text: $viewModel.numberSearch)
             if let error = viewModel.errorMessage {
                 ErrorBanner(message: error) { viewModel.errorMessage = nil }
                     .padding(.top, 8)
@@ -30,19 +39,10 @@ struct MarketplaceView: View {
             content
         }
         .pitchBackground()
-        .navigationTitle("Marketplace")
+        .toolbar(.hidden, for: .navigationBar)
         .navigationDestination(item: $chatRoute) { route in
             ChatView(conversationId: route.conversationId, currentUserId: userId,
                      otherUserId: route.otherUserId, title: route.title)
-        }
-        .searchable(text: $viewModel.numberSearch, prompt: "Search sticker number")
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button("My posts") { showMyPosts = true }
-            }
-            ToolbarItem(placement: .topBarTrailing) {
-                Button { editorTarget = .new } label: { Image(systemName: "plus") }
-            }
         }
         .sheet(item: $editorTarget, onDismiss: { Task { await reload() } }) { target in
             NavigationStack {
@@ -109,7 +109,7 @@ struct MarketplaceView: View {
             let posts = viewModel.filteredPosts()
             if posts.isEmpty {
                 EmptyStateView(
-                    systemImage: "soccerball",
+                    systemImage: "sportscourt",
                     title: "No posts nearby",
                     message: "Try a wider radius, or tap + to publish your repeated and missing stickers."
                 )
@@ -122,6 +122,7 @@ struct MarketplaceView: View {
                         onReport: { reportTarget = reportTargetFor(bundle.post) },
                         onBlock: { Task { await block(bundle.post) } }
                     )
+                    .floatingCardRow()
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)

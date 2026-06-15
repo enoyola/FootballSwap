@@ -85,8 +85,12 @@ struct ProfileView: View {
             }
         }
         .scrollContentBackground(.hidden)
+        .tint(.blue)
         .pitchBackground()
-        .navigationTitle("Profile")
+        .toolbar(.hidden, for: .navigationBar)
+        .safeAreaInset(edge: .top) {
+            ScreenHeader("Profile").background(Color(.systemGroupedBackground))
+        }
         .sheet(isPresented: $showCountryPicker) {
             CountryPickerView(selectedCode: $viewModel.countryCode)
         }

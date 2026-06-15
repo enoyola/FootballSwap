@@ -19,6 +19,8 @@ struct MatchesView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            ScreenHeader("Swap")
+
             if let error = viewModel.errorMessage {
                 ErrorBanner(message: error) { viewModel.errorMessage = nil }
                     .padding(.top, 8)
@@ -27,7 +29,7 @@ struct MatchesView: View {
             content
         }
         .pitchBackground()
-        .navigationTitle("Matches")
+        .toolbar(.hidden, for: .navigationBar)
         .navigationDestination(item: $chatRoute) { route in
             ChatView(conversationId: route.conversationId, currentUserId: userId,
                      otherUserId: route.otherUserId, title: route.title)
@@ -114,7 +116,7 @@ struct MatchesView: View {
             let matches = viewModel.filteredMatches()
             if matches.isEmpty {
                 EmptyStateView(
-                    systemImage: "soccerball",
+                    systemImage: "figure.soccer",
                     title: viewModel.matches.isEmpty ? "No matches yet" : "No matches nearby",
                     message: viewModel.matches.isEmpty
                         ? "Mark stickers as missing and repeated, and check back when more people post."
@@ -129,6 +131,7 @@ struct MatchesView: View {
                         onReport: { reportTarget = reportTargetFor(match.post) },
                         onBlock: { Task { await block(match.post) } }
                     )
+                    .floatingCardRow()
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
@@ -150,40 +153,45 @@ private struct MatchRowView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(match.post.nickname.isEmpty ? "Anonymous" : match.post.nickname)
-                    .font(.headline)
-                if !match.post.city.isEmpty {
-                    Text("· \(match.post.city)")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-                Spacer()
-                Text("Score \(match.score)")
-                    .font(.caption.weight(.bold))
-                    .padding(.horizontal, 10).padding(.vertical, 4)
-                    .background(Color.accentColor.opacity(0.15))
-                    .clipShape(Capsule())
-                if onReport != nil || onBlock != nil {
-                    Menu {
-                        if let onReport {
-                            Button { onReport() } label: { Label("Report", systemImage: "flag") }
-                        }
-                        if let onBlock {
-                            Button(role: .destructive) { onBlock() } label: {
-                                Label("Block \(displayName)", systemImage: "hand.raised")
-                            }
-                        }
-                    } label: {
-                        Image(systemName: "ellipsis").font(.callout).foregroundStyle(.secondary)
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(match.post.nickname.isEmpty ? "Anonymous" : match.post.nickname)
+                        .font(.headline)
+                    if !match.post.city.isEmpty {
+                        Label(match.post.city, systemImage: "mappin.and.ellipse")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    if let distanceText {
+                        Label(distanceText, systemImage: "location.fill")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(.blue)
+                            .padding(.top, 1)
                     }
                 }
-            }
-
-            if let distanceText {
-                Label(distanceText, systemImage: "location.fill")
-                    .font(.caption2.weight(.semibold))
-                    .foregroundStyle(.tint)
+                Spacer()
+                VStack(alignment: .trailing, spacing: 6) {
+                    if onReport != nil || onBlock != nil {
+                        Menu {
+                            if let onReport {
+                                Button { onReport() } label: { Label("Report", systemImage: "flag") }
+                            }
+                            if let onBlock {
+                                Button(role: .destructive) { onBlock() } label: {
+                                    Label("Block \(displayName)", systemImage: "hand.raised")
+                                }
+                            }
+                        } label: {
+                            Image(systemName: "ellipsis").font(.callout).foregroundStyle(.secondary)
+                        }
+                        .tint(Color(.secondaryLabel))
+                    }
+                    Text("Score \(match.score)")
+                        .font(.caption.weight(.bold))
+                        .padding(.horizontal, 10).padding(.vertical, 4)
+                        .background(Color.accentColor.opacity(0.15))
+                        .clipShape(Capsule())
+                }
             }
 
             Text("They have \(match.theyHaveCount) sticker\(match.theyHaveCount == 1 ? "" : "s") you need")
@@ -218,6 +226,7 @@ private struct MatchRowView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
+                .tint(.blue)
                 Spacer()
             }
             .padding(.top, 2)

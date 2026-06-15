@@ -116,6 +116,7 @@ struct ChatView: View {
             } label: {
                 Image(systemName: "arrow.up.circle.fill")
                     .font(.title2)
+                    .foregroundStyle(.blue)
             }
             .disabled(viewModel.inputText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || viewModel.isSending)
         }
@@ -135,7 +136,7 @@ private struct MessageBubble: View {
             Text(message.body)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)
-                .background(isMine ? Color.accentColor : Color.secondary.opacity(0.15))
+                .background(isMine ? Color.blue : Color.secondary.opacity(0.15))
                 .foregroundStyle(isMine ? Color.white : Color.primary)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
             if !isMine { Spacer(minLength: 40) }

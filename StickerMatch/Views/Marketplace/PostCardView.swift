@@ -31,7 +31,7 @@ struct PostCardView: View {
                     if let distanceText {
                         Label(distanceText, systemImage: "location.fill")
                             .font(.caption2.weight(.semibold))
-                            .foregroundStyle(.tint)
+                            .foregroundStyle(.blue)
                             .padding(.top, 1)
                     }
                 }
@@ -53,6 +53,7 @@ struct PostCardView: View {
                                 .foregroundStyle(.secondary)
                                 .padding(.leading, 8)
                         }
+                        .tint(Color(.secondaryLabel))
                     }
                     Text(Self.dateFormatter.string(from: bundle.post.createdAt))
                         .font(.caption2)
@@ -72,12 +73,16 @@ struct PostCardView: View {
                     .foregroundStyle(.secondary)
             }
 
-            numberSection(title: "Has (repeated)", numbers: bundle.repeated.map(\.stickerNumber), tint: .blue)
-            numberSection(title: "Needs (missing)", numbers: bundle.missing.map(\.stickerNumber), tint: .orange)
+            numberSection(title: String(localized: "Has (repeated)"), numbers: bundle.repeated.map(\.stickerNumber), tint: .blue)
+            numberSection(title: String(localized: "Needs (missing)"), numbers: bundle.missing.map(\.stickerNumber), tint: .orange)
 
             if !bundle.post.priceNote.isEmpty {
-                Label(bundle.post.priceNote, systemImage: "tag")
-                    .font(.caption)
+                Label {
+                    Text(bundle.post.priceNote)
+                } icon: {
+                    Image(systemName: "tag").foregroundStyle(.blue)
+                }
+                .font(.caption)
             }
 
             if let onMessage {
@@ -88,6 +93,7 @@ struct PostCardView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.small)
+                    .tint(.blue)
                     Spacer()
                 }
                 .padding(.top, 2)

@@ -11,6 +11,8 @@ struct AlbumView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            ScreenHeader("My Album")
+            SearchField(prompt: "Search number or name", text: $viewModel.searchText)
             if let error = viewModel.errorMessage {
                 ErrorBanner(message: error) { viewModel.errorMessage = nil }
                     .padding(.top, 8)
@@ -18,8 +20,7 @@ struct AlbumView: View {
             content
         }
         .pitchBackground()
-        .navigationTitle("My Album")
-        .searchable(text: $viewModel.searchText, prompt: "Search number or name")
+        .toolbar(.hidden, for: .navigationBar)
         .task { if viewModel.items.isEmpty { await viewModel.load() } }
         .refreshable { await viewModel.load() }
     }
@@ -87,6 +88,7 @@ struct AlbumView: View {
         }
         .listStyle(.insetGrouped)
         .scrollContentBackground(.hidden)
+        .contentMargins(.top, 0, for: .scrollContent)
     }
 }
 
@@ -101,10 +103,13 @@ private struct HeroCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("ROAD TO 2026")
-                .font(.caption.weight(.bold))
-                .tracking(1.5)
-                .foregroundStyle(.white.opacity(0.85))
+            HStack(spacing: 6) {
+                Image(systemName: "soccerball")
+                Text("ROAD TO 2026")
+                    .tracking(1.5)
+            }
+            .font(.caption.weight(.bold))
+            .foregroundStyle(.white.opacity(0.85))
 
             HStack(alignment: .firstTextBaseline, spacing: 6) {
                 Text("\(collected)")
@@ -139,7 +144,7 @@ private struct TeamCardRow: View {
             FlagView(team: team.name, height: 26)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(team.name).font(.body.weight(.semibold))
+                Text(CountryFlag.localizedName(for: team.name)).font(.body.weight(.semibold))
                 if !team.subtitle.isEmpty {
                     Text(team.subtitle)
                         .font(.caption2.weight(.bold))
@@ -156,7 +161,13 @@ private struct TeamCardRow: View {
             Text("\(team.collected)/\(team.total)")
                 .font(.caption.monospacedDigit().weight(.medium))
                 .foregroundStyle(.secondary)
-            ProgressRing(progress: fraction)
+            if team.total > 0 && team.collected == team.total {
+                Image(systemName: "trophy.fill")
+                    .font(.body)
+                    .foregroundStyle(.yellow)
+            } else {
+                ProgressRing(progress: fraction)
+            }
         }
         .padding(.vertical, 4)
     }

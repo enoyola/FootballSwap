@@ -12,6 +12,7 @@ struct ConversationsView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            ScreenHeader("Messages")
             if let error = viewModel.errorMessage {
                 ErrorBanner(message: error) { viewModel.errorMessage = nil }
                     .padding(.top, 8)
@@ -19,7 +20,7 @@ struct ConversationsView: View {
             content
         }
         .pitchBackground()
-        .navigationTitle("Messages")
+        .toolbar(.hidden, for: .navigationBar)
         .task { await viewModel.load() }
         .refreshable { await viewModel.load() }
     }

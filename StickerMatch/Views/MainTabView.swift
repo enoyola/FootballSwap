@@ -19,7 +19,7 @@ struct MainTabView: View {
             NavigationStack {
                 MatchesView(userId: userId)
             }
-            .tabItem { Label("Matches", systemImage: "arrow.left.arrow.right") }
+            .tabItem { Label("Swap", systemImage: "arrow.left.arrow.right") }
 
             NavigationStack {
                 ConversationsView(userId: userId)
