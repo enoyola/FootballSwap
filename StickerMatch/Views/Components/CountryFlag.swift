@@ -25,6 +25,22 @@ enum CountryFlag {
         }
     }
 
+    /// Localized display name for a team/country (e.g. "Algeria" → "Argelia" in
+    /// Spanish), from system region data. Falls back to the original name. Pass the
+    /// original English `teamText` for lookups; use this only for display.
+    static func localizedName(for team: String) -> String {
+        if let code = alpha2[team],
+           let name = Locale.current.localizedString(forRegionCode: code) {
+            return name
+        }
+        // ISO region codes don't cover UK home nations — localize via catalog.
+        switch team {
+        case "England":  return String(localized: "England")
+        case "Scotland": return String(localized: "Scotland")
+        default:         return team
+        }
+    }
+
     static func emoji(for team: String) -> String {
         // Subdivision flags use tag sequences (not regional-indicator pairs).
         switch team {

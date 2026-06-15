@@ -21,10 +21,10 @@ final class AlbumViewModel: ObservableObject {
         var id: String { rawValue }
         var label: String {
             switch self {
-            case .all:      return "All"
-            case .missing:  return "Missing"
-            case .have:     return "Have"
-            case .repeated: return "Repeated"
+            case .all:      return String(localized: "All")
+            case .missing:  return String(localized: "Missing")
+            case .have:     return String(localized: "Have")
+            case .repeated: return String(localized: "Repeated")
             }
         }
     }
@@ -55,7 +55,10 @@ final class AlbumViewModel: ObservableObject {
             .map { name, groupItems in
                 TeamGroup(name: name, items: groupItems.sorted { $0.sticker.number < $1.sticker.number })
             }
-            .sorted { $0.name < $1.name }
+            .sorted {
+                CountryFlag.localizedName(for: $0.name)
+                    .localizedCaseInsensitiveCompare(CountryFlag.localizedName(for: $1.name)) == .orderedAscending
+            }
     }
 
     /// Flat search across all teams (ignores the status filter, sorted by number).

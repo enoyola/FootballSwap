@@ -11,9 +11,9 @@ enum StickerStatus: String, Codable, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .missing:  return "Missing"
-        case .have:     return "Have"
-        case .repeated: return "Repeated"
+        case .missing:  return String(localized: "Missing")
+        case .have:     return String(localized: "Have")
+        case .repeated: return String(localized: "Repeated")
         }
     }
 }

@@ -15,4 +15,10 @@ struct Sticker: Codable, Identifiable, Hashable {
         case teamText = "team_text"
         case category
     }
+
+    /// Display name. Player names are proper nouns (shown as-is); the generic
+    /// "Team Crest" slot is localized ("Escudo" in Spanish).
+    var displayName: String {
+        playerName == "Team Crest" ? String(localized: "Team Crest") : playerName
+    }
 }

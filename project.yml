@@ -4,6 +4,7 @@ options:
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
+  developmentLanguage: en
 
 packages:
   Supabase:
@@ -40,6 +41,7 @@ targets:
         CODE_SIGN_ENTITLEMENTS: StickerMatch/StickerMatch.entitlements
         TARGETED_DEVICE_FAMILY: "1,2"
         ENABLE_PREVIEWS: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
 
 schemes:
   StickerMatch:

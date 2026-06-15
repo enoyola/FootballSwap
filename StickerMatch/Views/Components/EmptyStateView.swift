@@ -3,8 +3,8 @@ import SwiftUI
 /// Reusable empty-state placeholder.
 struct EmptyStateView: View {
     let systemImage: String
-    let title: String
-    var message: String? = nil
+    let title: LocalizedStringKey
+    var message: LocalizedStringKey? = nil
 
     var body: some View {
         VStack(spacing: 12) {

@@ -94,7 +94,7 @@ final class CreatePostViewModel: ObservableObject {
 
     func save() async {
         guard canSave else {
-            errorMessage = "Add a city and at least one repeated or missing sticker."
+            errorMessage = String(localized: "Add a city and at least one repeated or missing sticker.")
             return
         }
         isSaving = true

@@ -1,0 +1,1206 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "· %@": {},
+    "/ %lld stickers": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "/ %lld estampas"
+          }
+        }
+      }
+    },
+    "#%@": {},
+    "%@ · %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ · %2$lld"
+          }
+        }
+      }
+    },
+    "%lld": {},
+    "%lld of %lld teams complete": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld of %2$lld teams complete"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld de %2$lld equipos completos"
+          }
+        }
+      }
+    },
+    "%lld/%lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "%lld%%": {},
+    "×%lld": {},
+    "Account": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuenta"
+          }
+        }
+      }
+    },
+    "Add a city and at least one repeated or missing sticker.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrega una ciudad y al menos una estampa repetida o faltante."
+          }
+        }
+      }
+    },
+    "Add any context…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrega algún detalle…"
+          }
+        }
+      }
+    },
+    "Album": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Álbum"
+          }
+        }
+      }
+    },
+    "All": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas"
+          }
+        }
+      }
+    },
+    "Block": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bloquear"
+          }
+        }
+      }
+    },
+    "Block %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bloquear a %@"
+          }
+        }
+      }
+    },
+    "Block %@?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Bloquear a %@?"
+          }
+        }
+      }
+    },
+    "Blocked users": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuarios bloqueados"
+          }
+        }
+      }
+    },
+    "Blocked Users": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuarios bloqueados"
+          }
+        }
+      }
+    },
+    "Buyers reach you through in-app messages — no phone number needed.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los interesados te contactan por mensajes dentro de la app, sin número de teléfono."
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        }
+      }
+    },
+    "City": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ciudad"
+          }
+        }
+      }
+    },
+    "Complete your album faster. Find people nearby who have the stickers you need.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completa tu álbum más rápido. Encuentra personas cerca que tienen las estampas que necesitas."
+          }
+        }
+      }
+    },
+    "Continue with Google": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar con Google"
+          }
+        }
+      }
+    },
+    "Copies": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copias"
+          }
+        }
+      }
+    },
+    "Could not read Apple credentials. Please try again.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudieron leer las credenciales de Apple. Inténtalo de nuevo."
+          }
+        }
+      }
+    },
+    "Country": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "País"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        }
+      }
+    },
+    "Delete account": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar cuenta"
+          }
+        }
+      }
+    },
+    "Delete everything": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar todo"
+          }
+        }
+      }
+    },
+    "Delete post": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar publicación"
+          }
+        }
+      }
+    },
+    "Delete this post?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar esta publicación?"
+          }
+        }
+      }
+    },
+    "Delete your account?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar tu cuenta?"
+          }
+        }
+      }
+    },
+    "Details (optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detalles (opcional)"
+          }
+        }
+      }
+    },
+    "Distance": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
+          }
+        }
+      }
+    },
+    "Edit Post": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar publicación"
+          }
+        }
+      }
+    },
+    "Enable location to see matches near you.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activa la ubicación para ver coincidencias cerca de ti."
+          }
+        }
+      }
+    },
+    "Enable location to see trades near you.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activa la ubicación para ver intercambios cerca de ti."
+          }
+        }
+      }
+    },
+    "Filter": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtrar"
+          }
+        }
+      }
+    },
+    "Finding possible trades…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscando intercambios posibles…"
+          }
+        }
+      }
+    },
+    "FootballSwap": {},
+    "Harassment or inappropriate": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acoso o contenido inapropiado"
+          }
+        }
+      }
+    },
+    "Has (repeated)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiene (repetidas)"
+          }
+        }
+      }
+    },
+    "Have": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tengo"
+          }
+        }
+      }
+    },
+    "Loading messages…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando mensajes…"
+          }
+        }
+      }
+    },
+    "Loading posts…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando publicaciones…"
+          }
+        }
+      }
+    },
+    "Loading your album…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando tu álbum…"
+          }
+        }
+      }
+    },
+    "Loading your posts…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando tus publicaciones…"
+          }
+        }
+      }
+    },
+    "Loading…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargando…"
+          }
+        }
+      }
+    },
+    "Locating…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ubicando…"
+          }
+        }
+      }
+    },
+    "Mark stickers as missing and repeated, and check back when more people post.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marca las estampas que te faltan y las repetidas, y vuelve cuando haya más publicaciones."
+          }
+        }
+      }
+    },
+    "Meet only in public places. FootballSwap does not process payments, verify users, or guarantee trades.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reúnete solo en lugares públicos. FootballSwap no procesa pagos, no verifica usuarios ni garantiza intercambios."
+          }
+        }
+      }
+    },
+    "Meeting point (public place)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punto de encuentro (lugar público)"
+          }
+        }
+      }
+    },
+    "Meeting time (e.g. Sat 3–6pm)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horario de encuentro (ej. sáb 3–6pm)"
+          }
+        }
+      }
+    },
+    "Message": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mensaje"
+          }
+        }
+      }
+    },
+    "Messages": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mensajes"
+          }
+        }
+      }
+    },
+    "Missing": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Faltante"
+          }
+        }
+      }
+    },
+    "My Album": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi álbum"
+          }
+        }
+      }
+    },
+    "My posts": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis publicaciones"
+          }
+        }
+      }
+    },
+    "My Posts": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis publicaciones"
+          }
+        }
+      }
+    },
+    "Needs (missing)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Necesita (faltantes)"
+          }
+        }
+      }
+    },
+    "New Post": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nueva publicación"
+          }
+        }
+      }
+    },
+    "Nickname": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apodo"
+          }
+        }
+      }
+    },
+    "No blocked users": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin usuarios bloqueados"
+          }
+        }
+      }
+    },
+    "No matches": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin coincidencias"
+          }
+        }
+      }
+    },
+    "No matches nearby": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin coincidencias cerca"
+          }
+        }
+      }
+    },
+    "No matches yet": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay coincidencias"
+          }
+        }
+      }
+    },
+    "No messages yet": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay mensajes"
+          }
+        }
+      }
+    },
+    "No players match “%@”.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ningún jugador coincide con “%@”."
+          }
+        }
+      }
+    },
+    "No posts nearby": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin publicaciones cerca"
+          }
+        }
+      }
+    },
+    "No posts yet": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay publicaciones"
+          }
+        }
+      }
+    },
+    "No stickers to show for %@.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay estampas para mostrar de %@."
+          }
+        }
+      }
+    },
+    "Nothing here": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay nada aquí"
+          }
+        }
+      }
+    },
+    "Other": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otro"
+          }
+        }
+      }
+    },
+    "People you block won't see your posts or reach you, and you won't see theirs.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las personas que bloquees no verán tus publicaciones ni podrán contactarte, y tú no verás las suyas."
+          }
+        }
+      }
+    },
+    "Preferred meeting point": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punto de encuentro preferido"
+          }
+        }
+      }
+    },
+    "Price / trade note": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Precio / nota de intercambio"
+          }
+        }
+      }
+    },
+    "Profile": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfil"
+          }
+        }
+      }
+    },
+    "Publish": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Publicar"
+          }
+        }
+      }
+    },
+    "Reason": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivo"
+          }
+        }
+      }
+    },
+    "Repeated": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repetida"
+          }
+        }
+      }
+    },
+    "Report": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reportar"
+          }
+        }
+      }
+    },
+    "Report post": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reportar publicación"
+          }
+        }
+      }
+    },
+    "ROAD TO 2026": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RUMBO A 2026"
+          }
+        }
+      }
+    },
+    "Safety": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguridad"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        }
+      }
+    },
+    "Saving…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardando…"
+          }
+        }
+      }
+    },
+    "Say hello and arrange a public place to trade.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saluda y acuerda un lugar público para intercambiar."
+          }
+        }
+      }
+    },
+    "Scam or fraud": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estafa o fraude"
+          }
+        }
+      }
+    },
+    "Score %lld": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puntuación %lld"
+          }
+        }
+      }
+    },
+    "Search city": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar ciudad"
+          }
+        }
+      }
+    },
+    "Search country": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar país"
+          }
+        }
+      }
+    },
+    "Search number or name": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar número o nombre"
+          }
+        }
+      }
+    },
+    "Search sticker number": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar número de estampa"
+          }
+        }
+      }
+    },
+    "Search your city": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Busca tu ciudad"
+          }
+        }
+      }
+    },
+    "Select": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seleccionar"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        }
+      }
+    },
+    "Showing %@. Turn on location for nearby matches.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrando %@. Activa la ubicación para ver coincidencias cercanas."
+          }
+        }
+      }
+    },
+    "Showing %@. Turn on location for nearby trades.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrando %@. Activa la ubicación para ver intercambios cercanos."
+          }
+        }
+      }
+    },
+    "Sign out": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar sesión"
+          }
+        }
+      }
+    },
+    "Spam": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spam"
+          }
+        }
+      }
+    },
+    "Start typing a city name to see suggestions.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empieza a escribir el nombre de una ciudad para ver sugerencias."
+          }
+        }
+      }
+    },
+    "Stickers you have (repeated)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estampas que tienes (repetidas)"
+          }
+        }
+      }
+    },
+    "Stickers you need (missing)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estampas que necesitas (faltantes)"
+          }
+        }
+      }
+    },
+    "Submit": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enviar"
+          }
+        }
+      }
+    },
+    "Tap “Message” on a post or match to start a chat.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca “Mensaje” en una publicación o coincidencia para iniciar un chat."
+          }
+        }
+      }
+    },
+    "Teams": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Equipos"
+          }
+        }
+      }
+    },
+    "There are matches farther away — widen the radius to see them.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hay coincidencias más lejos: amplía el radio para verlas."
+          }
+        }
+      }
+    },
+    "They have %lld sticker%@ you need": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "They have %1$lld sticker%2$@ you need"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienen %1$lld estampa%2$@ que necesitas"
+          }
+        }
+      }
+    },
+    "This permanently deletes your album, posts, and messages. This cannot be undone.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esto elimina permanentemente tu álbum, tus publicaciones y tus mensajes. No se puede deshacer."
+          }
+        }
+      }
+    },
+    "Trader": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coleccionista"
+          }
+        }
+      }
+    },
+    "Try a wider radius, or tap + to publish your repeated and missing stickers.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prueba un radio más amplio o toca + para publicar tus estampas repetidas y faltantes."
+          }
+        }
+      }
+    },
+    "Unblock": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloquear"
+          }
+        }
+      }
+    },
+    "You have %lld sticker%@ they need": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "You have %1$lld sticker%2$@ they need"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienes %1$lld estampa%2$@ que necesitan"
+          }
+        }
+      }
+    },
+    "You won't see each other's posts, matches, or messages.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya no verán las publicaciones, coincidencias ni mensajes del otro."
+          }
+        }
+      }
+    },
+    "You're reporting %@. Reports are reviewed by our team. You can also block this person to stop all contact.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estás reportando a %@. Nuestro equipo revisa los reportes. También puedes bloquear a esta persona para detener todo contacto."
+          }
+        }
+      }
+    },
+    "Your details": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus datos"
+          }
+        }
+      }
+    },
+    "England": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inglaterra"
+          }
+        }
+      }
+    },
+    "Scotland": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escocia"
+          }
+        }
+      }
+    },
+    "Market": {
+      "shouldTranslate": false
+    },
+    "Marketplace": {
+      "shouldTranslate": false
+    },
+    "Tap + in the Marketplace to publish your repeated and missing stickers.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca + en Marketplace para publicar tus estampas repetidas y faltantes."
+          }
+        }
+      }
+    },
+    "Swap": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intercambio"
+          }
+        }
+      }
+    },
+    "Team Crest": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escudo"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

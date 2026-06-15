@@ -11,7 +11,7 @@ enum DistanceRadius: String, CaseIterable, Identifiable {
         case .km50: return "50 km"
         case .km100: return "100 km"
         case .km250: return "250 km"
-        case .everywhere: return "All"
+        case .everywhere: return String(localized: "All")
         }
     }
 

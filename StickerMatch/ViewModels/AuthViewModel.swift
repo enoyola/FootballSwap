@@ -63,7 +63,7 @@ final class AuthViewModel: ObservableObject {
                 let idToken = String(data: tokenData, encoding: .utf8),
                 let nonce = currentNonce
             else {
-                errorMessage = "Could not read Apple credentials. Please try again."
+                errorMessage = String(localized: "Could not read Apple credentials. Please try again.")
                 return
             }
             Task { await signInWithApple(idToken: idToken, nonce: nonce) }

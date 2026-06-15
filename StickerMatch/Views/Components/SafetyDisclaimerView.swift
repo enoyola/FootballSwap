@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The required safety disclaimer, shown in the marketplace and on posts.
 struct SafetyDisclaimerView: View {
-    static let text = "Meet only in public places. FootballSwap does not process payments, verify users, or guarantee trades."
+    static let text = String(localized: "Meet only in public places. FootballSwap does not process payments, verify users, or guarantee trades.")
 
     var compact = false
 

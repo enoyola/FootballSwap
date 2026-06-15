@@ -21,7 +21,7 @@ struct TeamAlbumView: View {
                 EmptyStateView(
                     systemImage: "tray",
                     title: "Nothing here",
-                    message: "No \(viewModel.filter.label.lowercased()) stickers for \(team)."
+                    message: "No stickers to show for \(team)."
                 )
             } else {
                 List(items) { item in
@@ -34,7 +34,7 @@ struct TeamAlbumView: View {
             }
         }
         .pitchBackground()
-        .navigationTitle(team)
+        .navigationTitle(CountryFlag.localizedName(for: team))
         .navigationBarTitleDisplayMode(.inline)
     }
 }

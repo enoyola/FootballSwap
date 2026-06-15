@@ -12,7 +12,7 @@ struct StickerRowView: View {
                 Text("#\(item.sticker.number)")
                     .font(.subheadline.monospacedDigit().weight(.semibold))
                     .foregroundStyle(.secondary)
-                Text(item.sticker.playerName)
+                Text(item.sticker.displayName)
                     .font(.body.weight(.medium))
                 Spacer()
                 StatusBadge(status: item.status)
@@ -47,7 +47,7 @@ struct StickerRowView: View {
     }
 
     private var subtitle: String {
-        [item.sticker.teamText, item.sticker.category]
+        [CountryFlag.localizedName(for: item.sticker.teamText), item.sticker.category]
             .filter { !$0.isEmpty }
             .joined(separator: " · ")
     }

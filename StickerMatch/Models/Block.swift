@@ -15,7 +15,7 @@ struct Block: Codable, Identifiable, Hashable {
         case blockedNickname = "blocked_nickname"
     }
 
-    var displayName: String { blockedNickname.isEmpty ? "Trader" : blockedNickname }
+    var displayName: String { blockedNickname.isEmpty ? String(localized: "Trader") : blockedNickname }
 }
 
 struct BlockInsert: Encodable {
@@ -40,10 +40,10 @@ enum ReportReason: String, Codable, CaseIterable, Identifiable {
     var id: String { rawValue }
     var label: String {
         switch self {
-        case .spam:       return "Spam"
-        case .harassment: return "Harassment or inappropriate"
-        case .scam:       return "Scam or fraud"
-        case .other:      return "Other"
+        case .spam:       return String(localized: "Spam")
+        case .harassment: return String(localized: "Harassment or inappropriate")
+        case .scam:       return String(localized: "Scam or fraud")
+        case .other:      return String(localized: "Other")
         }
     }
 }
