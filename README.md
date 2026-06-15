@@ -36,7 +36,7 @@ No payments. Connections happen through in-app messaging; users can **block** an
 supabase/
   01_schema.sql            # tables + enums + indexes
   02_rls.sql               # Row Level Security
-  03_seed.sql              # 442 catalog stickers (real players, our own numbering)
+  03_seed.sql              # 504 catalog stickers (42 teams x 11 players + a text Team Crest)
   04_triggers.sql          # auto-create profile on sign-up
   05_messaging.sql         # conversations + messages + RPC + realtime
   06_location.sql          # post latitude/longitude/country
@@ -62,7 +62,7 @@ project.yml                # XcodeGen spec
 
 1. Create a project at <https://supabase.com>.
 2. **SQL Editor** → run in order: `01` → `02` → `03` → `04` → `05` → `06` → `07` → `08`.
-3. Verify the catalog: `select count(*) from public.stickers;` → **442**.
+3. Verify the catalog: `select count(*) from public.stickers;` → **504**.
    (Replace it via Table Editor → `stickers` → Import CSV, shaped like `stickers_seed.csv`.)
 4. **Deploy the edge function** (account deletion):
    ```bash

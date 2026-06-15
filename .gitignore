@@ -4,6 +4,10 @@ StickerMatch/Config/Secrets.xcconfig
 # Claude Code local (machine-specific) settings
 .claude/settings.local.json
 
+# Other tools / working artifacts (not app source; catalog lives in supabase/stickers_seed.csv)
+.codex/
+outputs/
+
 # macOS
 .DS_Store
 

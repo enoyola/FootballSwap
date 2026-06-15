@@ -33,7 +33,7 @@ Backend checks use the Supabase MCP (`execute_sql`, `get_advisors`, `get_logs`).
   Functions APIs all compile).
 - **Auth**: Google OAuth → `/token` 200, `user_signedup`+`login` in auth logs, `profiles` row
   auto-created (nickname from Google name).
-- **Album**: status edits persist (copies counter); 442 stickers load grouped by team.
+- **Album**: status edits persist (copies counter); 504 stickers load grouped by team.
 - **Matches**: intersection + score verified via SQL to equal the app's `MatchService` output.
 - **Messaging**: realtime insert delivered; last-message trigger updates conversation preview.
 - **Location**: distance sort + radius cutoff + country fallback exercised by setting sim GPS and
@@ -51,7 +51,7 @@ Backend checks use the Supabase MCP (`execute_sql`, `get_advisors`, `get_logs`).
 - **Emoji flags don't render in the Simulator** → use `FlagView` (flagcdn images).
 - **`simctl` location grant is unreliable** → reset + let the in-app prompt grant, then `location set`.
 - **Distance is from device GPS, not profile city.** The profile city/country is the no-location fallback.
-- Catalog count is **442** (not the original 30 sample).
+- Catalog count is **504** (not the original 30 sample).
 - **App-name split:** the on-device display name is **FootballSwap**, but the scheme, product
   (`StickerMatch.app`), and bundle id (`com.stickermatch.app`) are still StickerMatch — the build/
   deploy commands above are unchanged. The FootballSwap display name **and** the login buttons

@@ -18,7 +18,7 @@ SQL files applied via MCP migrations and mirrored in `supabase/`:
 |------|----------|
 | `01_schema.sql` | enums (`sticker_status`, `post_sticker_kind`) + tables + indexes |
 | `02_rls.sql` | base RLS (owner-only album/profile; public-read marketplace) |
-| `03_seed.sql` / `stickers_seed.csv` | **442** catalog stickers (real WC players, our own numbering, confederation as category) |
+| `03_seed.sql` / `stickers_seed.csv` | **504** catalog stickers (42 teams × 11 real players + a text "Team Crest"/"Escudo"; our own numbering, confederation as category) |
 | `04_triggers.sql` | `handle_new_user` → auto-create profile on sign-up |
 | `05_messaging.sql` | `conversations`, `messages`, `get_or_create_conversation` RPC, last-message trigger, realtime publication |
 | `06_location.sql` | `posts.latitude/longitude/country` |
@@ -54,7 +54,8 @@ messaging realtime confirmed in auth logs/MCP; distance sort/fallback; block RLS
 edge fn returns 401 unauthorized. See `TESTING.md`.
 
 ## Current data state
-1 real user (eduar10nc), 442 stickers, 0 posts/conversations (test traders Marco/Sofia removed).
+1 real user (Eduardo Noyola, Santa Ana SV), **504** stickers. Demo traders (Carla/Diego/Lucía/Marco)
++ 4 posts + a sample chat seeded near El Salvador for testing Market/Intercambio + matches.
 
 ## Pending — App Store gates (mostly external, awaiting Apple Developer enrollment)
 - Sign in with Apple (functional + configured) — required since Google login is offered.
