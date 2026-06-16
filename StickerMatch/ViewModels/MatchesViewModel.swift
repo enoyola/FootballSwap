@@ -44,6 +44,11 @@ final class MatchesViewModel: ObservableObject {
             let (fetched, profile) = try await (matchesTask, profileTask)
             matches = fetched
             myCountry = profile?.country ?? ""
+
+            // Fall back to the profile city for "near me" when GPS is unavailable.
+            if userCoordinate == nil, let city = profile?.city {
+                self.userCoordinate = await LocationService.coordinate(forCity: city)
+            }
         } catch {
             errorMessage = AppError.from(error).message
         }

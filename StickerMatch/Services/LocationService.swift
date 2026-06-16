@@ -38,6 +38,14 @@ final class LocationService: NSObject, ObservableObject, CLLocationManagerDelega
         }
     }
 
+    /// Geocodes a free-text place (e.g. a profile city) to a coordinate. Used as a
+    /// fallback for "near me" when device GPS isn't available.
+    static func coordinate(forCity city: String) async -> CLLocationCoordinate2D? {
+        let trimmed = city.trimmingCharacters(in: .whitespaces)
+        guard !trimmed.isEmpty else { return nil }
+        return try? await CLGeocoder().geocodeAddressString(trimmed).first?.location?.coordinate
+    }
+
     // MARK: - CLLocationManagerDelegate
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
