@@ -39,11 +39,18 @@ final class LocationService: NSObject, ObservableObject, CLLocationManagerDelega
     }
 
     /// Geocodes a free-text place (e.g. a profile city) to a coordinate. Used as a
-    /// fallback for "near me" when device GPS isn't available.
+    /// fallback for "near me" when device GPS isn't available. Results are cached
+    /// for the session so repeated loads don't re-hit CLGeocoder (which is rate-limited).
+    private static var cityCache: [String: CLLocationCoordinate2D] = [:]
+
     static func coordinate(forCity city: String) async -> CLLocationCoordinate2D? {
         let trimmed = city.trimmingCharacters(in: .whitespaces)
         guard !trimmed.isEmpty else { return nil }
-        return try? await CLGeocoder().geocodeAddressString(trimmed).first?.location?.coordinate
+        if let cached = cityCache[trimmed] { return cached }
+        guard let coord = try? await CLGeocoder().geocodeAddressString(trimmed).first?.location?.coordinate
+        else { return nil }
+        cityCache[trimmed] = coord
+        return coord
     }
 
     // MARK: - CLLocationManagerDelegate

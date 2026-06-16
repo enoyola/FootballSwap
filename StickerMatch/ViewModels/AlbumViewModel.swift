@@ -97,9 +97,7 @@ final class AlbumViewModel: ObservableObject {
     func setCopies(for item: AlbumItem, copies: Int) async {
         guard let index = items.firstIndex(where: { $0.id == item.id }) else { return }
         let previous = items[index]
-        let clamped = max(0, copies)
-        let status: StickerStatus = clamped == 0 ? .missing : (clamped == 1 ? .have : .repeated)
-        let qty = clamped >= 2 ? clamped : 0
+        let (status, qty) = StickerStatus.from(copies: copies)
 
         // Optimistic local update.
         items[index].status = status

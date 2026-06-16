@@ -45,12 +45,31 @@ targets:
         ENABLE_PREVIEWS: YES
         SWIFT_EMIT_LOC_STRINGS: YES
 
+  StickerMatchTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: StickerMatch
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.stickermatch.tests
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/StickerMatch.app/StickerMatch"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
 schemes:
   StickerMatch:
     build:
       targets:
         StickerMatch: all
+        StickerMatchTests: [test]
     run:
       config: Debug
     test:
       config: Debug
+      targets:
+        - StickerMatchTests

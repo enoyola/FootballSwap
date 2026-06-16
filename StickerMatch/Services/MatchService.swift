@@ -21,22 +21,22 @@ final class MatchService {
         async let albumTask = albumService.fetchAlbum(userId: userId)
         async let postsTask = postService.fetchActivePosts(excludingUserId: userId)
         let (album, posts) = try await (albumTask, postsTask)
+        return Self.computeMatches(album: album, posts: posts)
+    }
 
-        // My sticker numbers by status.
+    /// Pure matching (no I/O), exposed for testing:
+    ///   theyHave = post.repeated ∩ myMissing, iHave = myRepeated ∩ post.missing,
+    ///   score = theyHave + iHave, keep score > 0, sort by score desc.
+    static func computeMatches(album: [AlbumItem], posts: [PostWithStickers]) -> [Match] {
         let myMissing = Set(album.filter { $0.status == .missing }.map { $0.sticker.number })
         let myRepeated = Set(album.filter { $0.status == .repeated }.map { $0.sticker.number })
 
-        let matches: [Match] = posts.compactMap { bundle in
-            let postRepeated = Set(bundle.repeated.map(\.stickerNumber))
-            let postMissing = Set(bundle.missing.map(\.stickerNumber))
-
-            let theyHave = postRepeated.intersection(myMissing).sorted()
-            let iHave = myRepeated.intersection(postMissing).sorted()
-
+        return posts.compactMap { bundle in
+            let theyHave = Set(bundle.repeated.map(\.stickerNumber)).intersection(myMissing).sorted()
+            let iHave = Set(bundle.missing.map(\.stickerNumber)).intersection(myRepeated).sorted()
             guard !theyHave.isEmpty || !iHave.isEmpty else { return nil }
             return Match(post: bundle.post, theyHave: theyHave, iHave: iHave)
         }
-
-        return matches.sorted { $0.score > $1.score }
+        .sorted { $0.score > $1.score }
     }
 }

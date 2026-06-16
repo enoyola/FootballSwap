@@ -2,9 +2,12 @@
 
 _Last updated: 2026-06-14_
 
-There is **no automated test suite yet** (no XCTest target). Verification this session was
-**manual**: compile checks, simulator runs + screenshots, Supabase MCP SQL/log inspection, and
-HTTP checks. This doc records what was verified and the gotchas to know.
+A focused **XCTest suite** (`Tests/`, target `StickerMatchTests` — **13 tests**) covers the pure logic:
+`MatchService.computeMatches` (overlap/score/ranking), the copies→status mapping, album search, and
+distance radii. Run it with:
+`xcodebuild -project StickerMatch.xcodeproj -scheme StickerMatch -destination 'id=<sim>' -derivedDataPath build CODE_SIGNING_ALLOWED=NO test`.
+The rest of verification is **manual**: simulator runs + screenshots, Supabase MCP SQL/log
+inspection, and HTTP checks. This doc records what was verified and the gotchas to know.
 
 ## Commands
 
@@ -58,6 +61,6 @@ Backend checks use the Supabase MCP (`execute_sql`, `get_advisors`, `get_logs`).
   (native black Apple + compliant Google "G" card) are **confirmed on a rebuilt sim app**.
 
 ## Suggested next tests (not yet done)
-- XCTest unit tests for `MatchService` intersection/scoring and `AlbumViewModel.setCopies` mapping.
 - Real-device pass for Sign in with Apple, location prompt, and Keychain (signed build).
 - Account-deletion happy path with a throwaway account (cascade wipe).
+- UI tests for the core flows (album status changes, posting, matching).
