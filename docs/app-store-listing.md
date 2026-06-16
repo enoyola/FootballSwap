@@ -71,8 +71,11 @@ FootballSwap is a fan utility for tracking a physical football sticker album and
 in-person trades. It is NOT an official app and contains no FIFA/Panini logos, crests, or images —
 only plain-text real player/country names (factual references) and public-domain national flags.
 
-Sign-in: Sign in with Apple and Google are both supported.
-Demo account for review: <ADD a demo Apple ID / or a pre-seeded test account + how to use it>.
+Sign-in: Sign in with Apple and Google are both supported. To review, sign in with the demo
+Apple ID below (a free throwaway Apple ID is fine — sign in once to create the in-app profile).
+The marketplace is pre-populated with sample trade posts so every feature is visible.
+  Apple ID: <demo Apple ID email>
+  Password: <password>
 
 User-generated content safety: users can Report posts/users and Block users (Profile and on each
 post/match/chat). Reports are reviewed and acted on within 24 hours. A Terms of Use (EULA) requiring
