@@ -64,6 +64,13 @@ struct LoginView: View {
                 if auth.isLoading {
                     ProgressView().padding(.top, 4)
                 }
+
+                Text("By continuing, you agree to our [Terms of Use](https://enoyola.github.io/FootballSwap/terms.html) and [Privacy Policy](https://enoyola.github.io/FootballSwap/privacy.html).")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .tint(.blue)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 2)
             }
             .padding(.horizontal)
 

@@ -1,7 +1,6 @@
 {
   "sourceLanguage": "en",
   "strings": {
-    "· %@": {},
     "/ %lld stickers": {
       "localizations": {
         "es": {
@@ -352,6 +351,16 @@
         }
       }
     },
+    "England": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inglaterra"
+          }
+        }
+      }
+    },
     "Filter": {
       "localizations": {
         "es": {
@@ -473,6 +482,12 @@
         }
       }
     },
+    "Market": {
+      "shouldTranslate": false
+    },
+    "Marketplace": {
+      "shouldTranslate": false
+    },
     "Meet only in public places. FootballSwap does not process payments, verify users, or guarantee trades.": {
       "localizations": {
         "es": {
@@ -544,6 +559,7 @@
       }
     },
     "My posts": {
+      "extractionState": "stale",
       "localizations": {
         "es": {
           "stringUnit": {
@@ -863,6 +879,16 @@
         }
       }
     },
+    "Scotland": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escocia"
+          }
+        }
+      }
+    },
     "Search city": {
       "localizations": {
         "es": {
@@ -1013,12 +1039,42 @@
         }
       }
     },
+    "Swap": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intercambio"
+          }
+        }
+      }
+    },
     "Tap “Message” on a post or match to start a chat.": {
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
             "value": "Toca “Mensaje” en una publicación o coincidencia para iniciar un chat."
+          }
+        }
+      }
+    },
+    "Tap + in the Marketplace to publish your repeated and missing stickers.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca + en Marketplace para publicar tus estampas repetidas y faltantes."
+          }
+        }
+      }
+    },
+    "Team Crest": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escudo"
           }
         }
       }
@@ -1145,58 +1201,12 @@
         }
       }
     },
-    "England": {
+    "By continuing, you agree to our [Terms of Use](https://enoyola.github.io/FootballSwap/terms.html) and [Privacy Policy](https://enoyola.github.io/FootballSwap/privacy.html).": {
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inglaterra"
-          }
-        }
-      }
-    },
-    "Scotland": {
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Escocia"
-          }
-        }
-      }
-    },
-    "Market": {
-      "shouldTranslate": false
-    },
-    "Marketplace": {
-      "shouldTranslate": false
-    },
-    "Tap + in the Marketplace to publish your repeated and missing stickers.": {
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Toca + en Marketplace para publicar tus estampas repetidas y faltantes."
-          }
-        }
-      }
-    },
-    "Swap": {
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Intercambio"
-          }
-        }
-      }
-    },
-    "Team Crest": {
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Escudo"
+            "value": "Al continuar, aceptas nuestros [Términos de uso](https://enoyola.github.io/FootballSwap/terms.html) y [Política de privacidad](https://enoyola.github.io/FootballSwap/privacy.html)."
           }
         }
       }
