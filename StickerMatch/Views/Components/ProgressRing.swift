@@ -14,7 +14,7 @@ struct ProgressRing: View {
             Circle()
                 .trim(from: 0, to: clamped)
                 .stroke(
-                    clamped >= 1 ? Color.green : Color.accentColor,
+                    clamped >= 1 ? Color.green : Color("AccentColor"),
                     style: StrokeStyle(lineWidth: 3.5, lineCap: .round)
                 )
                 .rotationEffect(.degrees(-90))

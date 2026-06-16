@@ -189,7 +189,7 @@ private struct MatchRowView: View {
                     Text("Score \(match.score)")
                         .font(.caption.weight(.bold))
                         .padding(.horizontal, 10).padding(.vertical, 4)
-                        .background(Color.accentColor.opacity(0.15))
+                        .background(Color("AccentColor").opacity(0.15))
                         .clipShape(Capsule())
                 }
             }

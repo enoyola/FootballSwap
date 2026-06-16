@@ -69,7 +69,7 @@ struct AlbumView: View {
                 .listRowInsets(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
                 .listRowBackground(
                     LinearGradient(
-                        colors: [Color.accentColor,
+                        colors: [Color("AccentColor"),
                                  Color(red: 0.0, green: 0.47, blue: 0.96)], // icon blue
                         startPoint: .topLeading, endPoint: .bottomTrailing
                     )

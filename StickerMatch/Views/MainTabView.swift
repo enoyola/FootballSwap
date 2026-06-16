@@ -36,6 +36,6 @@ struct MainTabView: View {
             .tint(.blue)
             .tabItem { Label("Profile", systemImage: "person.crop.circle") }
         }
-        .tint(Color.accentColor) // keep the tab bar green; content tints itself blue
+        .tint(Color("AccentColor")) // keep the tab bar green; content tints itself blue
     }
 }
