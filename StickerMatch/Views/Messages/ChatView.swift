@@ -54,6 +54,7 @@ struct ChatView: View {
                 } label: {
                     Image(systemName: "ellipsis.circle")
                 }
+                .tint(Color(.secondaryLabel))
             }
         }
         .confirmationDialog("Block \(title)?", isPresented: $showBlockConfirm, titleVisibility: .visible) {

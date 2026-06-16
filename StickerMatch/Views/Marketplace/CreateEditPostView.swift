@@ -68,6 +68,7 @@ struct CreateEditPostView: View {
         }
         .navigationTitle(viewModel.isEditing ? "Edit Post" : "New Post")
         .navigationBarTitleDisplayMode(.inline)
+        .tint(.blue)
         .sheet(isPresented: $showCityPicker) {
             CityPickerView { city, coordinate in
                 viewModel.setCity(city, coordinate: coordinate)
