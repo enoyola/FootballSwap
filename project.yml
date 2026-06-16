@@ -31,6 +31,8 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.stickermatch.app
+        DEVELOPMENT_TEAM: T82VDBUCDV
+        CODE_SIGN_STYLE: Automatic
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_VERSION: "5.0"
