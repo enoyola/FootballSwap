@@ -101,6 +101,7 @@ final class CreatePostViewModel: ObservableObject {
         errorMessage = nil
         defer { isSaving = false }
         do {
+            await resolveCoordinateIfNeeded()
             if let editingPost {
                 try await postService.updatePost(
                     postId: editingPost.id,
@@ -121,6 +122,23 @@ final class CreatePostViewModel: ObservableObject {
             didSave = true
         } catch {
             errorMessage = AppError.from(error).message
+        }
+    }
+
+    /// If the city has no coordinate yet (e.g. it was pre-filled from the profile
+    /// rather than picked from the autocomplete), geocode the city text so the post
+    /// still gets a location and shows up in distance/radius searches.
+    private func resolveCoordinateIfNeeded() async {
+        guard latitude == nil || longitude == nil else { return }
+        let trimmed = city.trimmingCharacters(in: .whitespaces)
+        guard !trimmed.isEmpty else { return }
+        if let placemark = try? await CLGeocoder().geocodeAddressString(trimmed).first,
+           let location = placemark.location {
+            latitude = location.coordinate.latitude
+            longitude = location.coordinate.longitude
+            if countryCode.isEmpty, let iso = placemark.isoCountryCode {
+                countryCode = iso.uppercased()
+            }
         }
     }
 
