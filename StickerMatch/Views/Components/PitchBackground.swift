@@ -48,7 +48,7 @@ struct ScreenHeader<Trailing: View>: View {
 
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
-            Text(title).font(.largeTitle.bold())
+            Text(title).font(.title.bold())
             Spacer(minLength: 8)
             trailing
         }
