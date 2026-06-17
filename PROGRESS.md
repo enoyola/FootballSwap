@@ -61,17 +61,15 @@ edge fn returns 401 unauthorized. See `TESTING.md`.
 1 real user (Eduardo Noyola, Santa Ana SV), **504** stickers. Demo traders (Carla/Diego/Lucía/Marco)
 + 4 posts + a sample chat seeded near El Salvador for testing Market/Intercambio + matches.
 
-## App Store — engineering complete; only App Store Connect submission remains
-Done: Sign in with Apple ✅ (working on device, Guideline 4.8) · Google OAuth consent screen
-published ✅ · code signing + device build ✅ · app icon ✅ · Privacy Policy + Terms/EULA hosted ✅ ·
-account deletion ✅ · UGC report/block/moderation ✅ · push ✅ · **screenshots ✅** (10×, 6.9", en+es
-in `screenshots/`, gitignored).
+## App Store — ✅ submitted for review (2026-06-17, v1.0)
+Build 1 uploaded (Xcode Cloud) and **submitted**; status "Waiting for Review", **manual release**.
+App is **iPhone + iPad (universal)**; rating **17+** (overridden — the questionnaire computed 4+, but
+the app has open chat + in-person meetups). Screenshots: iPhone 6.5" (`screenshots/iphone-6.5/`,
+1284×2778) + iPad 13" (`screenshots/ipad-13/`, 2064×2752), en+es. App Privacy declares email, name,
+coarse location, user content, user ID — all App-Functionality, linked, not tracking.
 
-Remaining (all in App Store Connect / external, no code left):
-- Create the App Store Connect record; paste listing copy + screenshots + Privacy/Support URLs +
-  App Privacy answers + **17+** rating + a **demo account** in Review Notes (see `docs/app-store-listing.md`).
-- Archive (Release) → upload → submit. (Release auto-sets production APNs.)
-- Recommended: move Supabase off the free tier (auto-pause/no backups) before launch.
+**⚠️ Keep Supabase awake during review.** The free tier auto-pauses after ~7 days idle; if it's paused
+when the reviewer signs in, sign-in fails → rejection. Move to a paid tier (also gets backups).
 
 ## Push notifications — ✅ live (verified 2026-06-17)
 Backend (`10_push.sql` + `notify-message`) and the iOS client (registration, deep-link, unread
