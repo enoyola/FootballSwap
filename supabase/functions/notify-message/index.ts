@@ -111,6 +111,7 @@ Deno.serve(async (req: Request) => {
     .select("token")
     .eq("user_id", recipient);
   if (!tokens || tokens.length === 0) {
+    console.log(JSON.stringify({ recipient, sender_id, tokenCount: 0 }));
     return new Response(JSON.stringify({ ok: true, sent: 0 }), { status: 200 });
   }
 
@@ -120,10 +121,13 @@ Deno.serve(async (req: Request) => {
     conversation_id,
   });
 
-  let sent = 0;
-  const stale: string[] = [];
-  await Promise.all(tokens.map(async ({ token }: { token: string }) => {
-    const res = await fetch(`https://${APNS_HOST}/3/device/${token}`, {
+  const SANDBOX = "api.sandbox.push.apple.com";
+  const PROD = "api.push.apple.com";
+  const primary = APNS_HOST;                                  // from APNS_ENV
+  const secondary = APNS_HOST === PROD ? SANDBOX : PROD;      // the other environment
+
+  async function sendTo(host: string, token: string) {
+    const res = await fetch(`https://${host}/3/device/${token}`, {
       method: "POST",
       headers: {
         "authorization": `bearer ${jwt}`,
@@ -133,18 +137,35 @@ Deno.serve(async (req: Request) => {
       },
       body: apsPayload,
     });
-    if (res.status === 200) { sent++; return; }
-    const text = await res.text();
-    // 410 Unregistered or 400 BadDeviceToken → token is dead; clean it up.
-    if (res.status === 410 || text.includes("BadDeviceToken")) stale.push(token);
-    else console.error(`APNs ${res.status} for ${token.slice(0, 8)}…: ${text}`);
+    const reason = res.status === 200 ? "" : await res.text();
+    return { host, status: res.status, apnsId: res.headers.get("apns-id"), reason };
+  }
+
+  let sent = 0;
+  const stale: string[] = [];
+  const results: Array<Record<string, unknown>> = [];
+  await Promise.all(tokens.map(async ({ token }: { token: string }) => {
+    let r = await sendTo(primary, token);
+    // The token may belong to the other APNs environment (dev vs prod) — retry there.
+    if (r.status !== 200 && (r.reason.includes("BadDeviceToken") || r.reason.includes("BadEnvironment"))) {
+      r = await sendTo(secondary, token);
+    }
+    results.push({ ...r, token: token.slice(0, 8) });
+    if (r.status === 200) { sent++; return; }
+    // Only prune on 410 Unregistered (token is truly dead). BadDeviceToken is
+    // often an env/key/topic misconfig, so we must NOT delete valid tokens on it.
+    if (r.status === 410) stale.push(token);
   }));
+
+  // Always log a summary so delivery problems are diagnosable from the logs.
+  console.log(JSON.stringify({ host: APNS_HOST, recipient, sender_id, tokenCount: tokens.length, sent, results }));
 
   if (stale.length) {
     await admin.from("device_tokens").delete().in("token", stale);
   }
 
-  return new Response(JSON.stringify({ ok: true, sent, removed: stale.length }), {
+  const debug = req.headers.get("x-debug") === PUSH_SECRET;
+  return new Response(JSON.stringify({ ok: true, sent, removed: stale.length, ...(debug ? { results } : {}) }), {
     status: 200,
     headers: { "Content-Type": "application/json" },
   });
