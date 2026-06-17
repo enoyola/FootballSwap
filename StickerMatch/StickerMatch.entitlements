@@ -6,10 +6,11 @@
 	<array>
 		<string>Default</string>
 	</array>
-	<!-- APNs. "development" for dev/device debug builds (sandbox APNs).
-	     Change to "production" for TestFlight/App Store archives and set
-	     APNS_ENV=production on the notify-message Edge Function. -->
+	<!-- APNs environment is build-config driven via APS_ENVIRONMENT (project.yml):
+	     Debug → development (sandbox), Release/archive → production. No manual
+	     edits needed when shipping. The notify-message Edge Function auto-falls
+	     back between APNs hosts, so APNS_ENV is just the primary host to try. -->
 	<key>aps-environment</key>
-	<string>development</string>
+	<string>$(APS_ENVIRONMENT)</string>
 </dict>
 </plist>

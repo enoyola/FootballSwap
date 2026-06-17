@@ -44,6 +44,14 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         ENABLE_PREVIEWS: YES
         SWIFT_EMIT_LOC_STRINGS: YES
+      configs:
+        # APNs environment follows the build type: Debug (dev/device) → sandbox,
+        # Release (archive/TestFlight/App Store) → production. Referenced as
+        # $(APS_ENVIRONMENT) in StickerMatch.entitlements.
+        Debug:
+          APS_ENVIRONMENT: development
+        Release:
+          APS_ENVIRONMENT: production
 
   StickerMatchTests:
     type: bundle.unit-test
