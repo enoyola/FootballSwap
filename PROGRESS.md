@@ -61,12 +61,17 @@ edge fn returns 401 unauthorized. See `TESTING.md`.
 1 real user (Eduardo Noyola, Santa Ana SV), **504** stickers. Demo traders (Carla/Diego/Lucía/Marco)
 + 4 posts + a sample chat seeded near El Salvador for testing Market/Intercambio + matches.
 
-## Pending — App Store gates (mostly external, awaiting Apple Developer enrollment)
-- Sign in with Apple (functional + configured) — required since Google login is offered.
-- Real code signing + device/TestFlight build. (App icon ✅ done.)
-- Privacy Policy URL + App Store privacy disclosures + UGC terms/EULA at sign-up.
-- Publish/verify Google OAuth consent screen (currently "testing" mode).
-- Age rating (17+) + legal review of player-name usage.
+## App Store — engineering complete; only App Store Connect submission remains
+Done: Sign in with Apple ✅ (working on device, Guideline 4.8) · Google OAuth consent screen
+published ✅ · code signing + device build ✅ · app icon ✅ · Privacy Policy + Terms/EULA hosted ✅ ·
+account deletion ✅ · UGC report/block/moderation ✅ · push ✅ · **screenshots ✅** (10×, 6.9", en+es
+in `screenshots/`, gitignored).
+
+Remaining (all in App Store Connect / external, no code left):
+- Create the App Store Connect record; paste listing copy + screenshots + Privacy/Support URLs +
+  App Privacy answers + **17+** rating + a **demo account** in Review Notes (see `docs/app-store-listing.md`).
+- Archive (Release) → upload → submit. (Release auto-sets production APNs.)
+- Recommended: move Supabase off the free tier (auto-pause/no backups) before launch.
 
 ## Push notifications — ✅ live (verified 2026-06-17)
 Backend (`10_push.sql` + `notify-message`) and the iOS client (registration, deep-link, unread
