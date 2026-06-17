@@ -10,5 +10,6 @@ revoke execute on function public.handle_new_message() from anon, authenticated,
 revoke execute on function public.get_or_create_conversation(uuid) from anon, public;
 grant  execute on function public.get_or_create_conversation(uuid) to authenticated;
 
--- NOTE: also enable "Leaked password protection" in the dashboard
--- (Authentication → Policies) — it can't be toggled from SQL.
+-- NOTE: auth is OAuth-only (Apple + Google). Disable the Email (email/password)
+-- provider in the dashboard (Authentication → Sign In / Providers) so the password
+-- sign-up endpoint stays off; leaked-password protection is then N/A. Not SQL-toggleable.

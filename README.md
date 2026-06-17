@@ -78,8 +78,10 @@ project.yml                # XcodeGen spec
      `https://<project>.supabase.co/auth/v1/callback` as the redirect URI).
      URL Configuration → Redirect URLs → add `stickermatch://login-callback`.
    - **Apple** → enable for release (needs paid Apple Developer setup; see checklist).
-6. Authentication → Policies → enable **Leaked password protection**.
-7. Copy your **Project URL host** + **anon public key** (Project Settings → API).
+   - **Email** → **disable** (Authentication → Sign In / Providers → Email). The app is
+     **OAuth-only** (no email/password UI), so the password sign-up endpoint is turned off to
+     shrink the attack surface. Leaked-password protection is then **N/A** (no passwords exist).
+6. Copy your **Project URL host** + **anon public key** (Project Settings → API).
 
 ---
 

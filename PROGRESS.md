@@ -1,6 +1,6 @@
 # StickerMatch — Progress
 
-_Last updated: 2026-06-14_
+_Last updated: 2026-06-16_
 
 Native iOS (Swift/SwiftUI/MVVM) sticker-album + trading app on Supabase. Built end-to-end this
 session from two prompt specs. **Feature-complete MVP**; remaining work is App Store gating.
@@ -24,12 +24,14 @@ SQL files applied via MCP migrations and mirrored in `supabase/`:
 | `06_location.sql` | `posts.latitude/longitude/country` |
 | `07_safety.sql` | `blocks`, `reports`, `report_reason` enum; **block-aware** posts/conversations select policies |
 | `08_hardening.sql` | revoke API EXECUTE on SECURITY DEFINER functions |
+| `09_hardening2.sql` | pre-launch hardening: server-side post expiration, block-aware messaging, length/coord CHECK constraints, UGC moderation denylist + reject triggers |
 | `functions/delete-account/` | edge function: service-role account deletion (FK cascade wipes data) |
 
 **Tables:** `profiles`, `stickers`, `user_stickers`, `posts`, `post_stickers`, `conversations`,
 `messages`, `blocks`, `reports`. RLS on all. Realtime enabled on `messages`.
 **Security advisors:** clean (no missing-RLS); the few SECURITY DEFINER warnings resolved in `08`.
-Leaked-password protection = **dashboard toggle still pending**.
+**Auth = OAuth-only** (Apple + Google); the **Email/password provider is disabled** in the
+dashboard, so leaked-password protection is **N/A** (no passwords exist).
 
 ## iOS app
 
