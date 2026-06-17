@@ -56,6 +56,10 @@ final class PushManager {
     /// On sign-in: ask permission (once), register with APNs, and sync the token.
     func onSignIn(userId: UUID) {
         self.userId = userId
+        #if DEBUG
+        // Skip the notification permission prompt during automated screenshots.
+        if UserDefaults.standard.bool(forKey: "uiScreenshots") { return }
+        #endif
         Task {
             let center = UNUserNotificationCenter.current()
             let granted = (try? await center.requestAuthorization(options: [.alert, .sound, .badge])) ?? false

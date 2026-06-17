@@ -26,6 +26,10 @@ final class LocationService: NSObject, ObservableObject, CLLocationManagerDelega
     }
 
     func requestPermission() {
+        #if DEBUG
+        // Suppress the system prompt during automated screenshots (-uiScreenshots).
+        if UserDefaults.standard.bool(forKey: "uiScreenshots") { return }
+        #endif
         manager.requestWhenInUseAuthorization()
     }
 

@@ -14,5 +14,12 @@ final class AppRouter: ObservableObject {
     /// Set when a push is tapped; the Messages tab opens this conversation.
     @Published var openConversationId: UUID?
 
-    private init() {}
+    private init() {
+        #if DEBUG
+        // UI/screenshot automation only: `simctl launch … -startTab <0-4>` opens
+        // the app directly on that tab (no openurl confirmation dialog). Unset → 0.
+        let startTab = UserDefaults.standard.integer(forKey: "startTab")
+        if (0..<5).contains(startTab) { selectedTab = startTab }
+        #endif
+    }
 }

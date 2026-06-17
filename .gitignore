@@ -31,3 +31,5 @@ DerivedData/
 .swiftpm/
 Packages/
 Package.resolved
+screenshots/
+supabase/.temp/
