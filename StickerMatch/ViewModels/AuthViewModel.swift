@@ -35,8 +35,17 @@ final class AuthViewModel: ObservableObject {
     }
 
     private func apply(userId: UUID?) {
+        let previous = self.userId
         self.userId = userId
         self.isAuthenticated = userId != nil
+
+        // Keep push registration in sync with auth, but only on real transitions
+        // (auth emits tokenRefreshed/initialSession repeatedly for the same user).
+        if let userId, previous != userId {
+            PushManager.shared.onSignIn(userId: userId)
+        } else if userId == nil, previous != nil {
+            PushManager.shared.onSignOut()
+        }
     }
 
     // MARK: - Apple Sign-In

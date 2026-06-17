@@ -25,7 +25,9 @@ SQL files applied via MCP migrations and mirrored in `supabase/`:
 | `07_safety.sql` | `blocks`, `reports`, `report_reason` enum; **block-aware** posts/conversations select policies |
 | `08_hardening.sql` | revoke API EXECUTE on SECURITY DEFINER functions |
 | `09_hardening2.sql` | pre-launch hardening: server-side post expiration, block-aware messaging, length/coord CHECK constraints, UGC moderation denylist + reject triggers |
+| `10_push.sql` | `device_tokens` registry + register/unregister RPCs + on-message trigger (pg_net → `notify-message`) |
 | `functions/delete-account/` | edge function: service-role account deletion (FK cascade wipes data) |
+| `functions/notify-message/` | edge function: signs an APNs JWT and pushes new-message alerts to the recipient's devices |
 
 **Tables:** `profiles`, `stickers`, `user_stickers`, `posts`, `post_stickers`, `conversations`,
 `messages`, `blocks`, `reports`. RLS on all. Realtime enabled on `messages`.
@@ -44,7 +46,7 @@ XcodeGen (`project.yml`); `Info.plist`, `*.entitlements`, `PrivacyInfo.xcprivacy
 | Album | ✅ | Browse-by-team, flags, progress hero + rings, global search, **copies counter** (0/1/2+) |
 | Marketplace | ✅ | **Near-me** distance sort + radius (50/100/250/All), country fallback, My posts (edit/swipe-delete), Message button, excludes own |
 | Matches | ✅ | Score-ranked ∩, distance-limited, Message button |
-| Messages | ✅ | Realtime 1:1 chat (RealtimeV2); nicknames snapshotted (profiles stay private) |
+| Messages | ✅ | Realtime 1:1 chat (RealtimeV2); **APNs push on new message** (tap deep-links to the chat) + unread tab badge; nicknames snapshotted |
 | Safety | ✅ | Block (RLS hides both ways) + Report (reason+note) from post/match/chat; Blocked-users mgmt |
 | Profile | ✅ | Nickname, **country picker** (all ISO), **city** (MapKit autocomplete), meeting point, **real account deletion** |
 | Location | ✅ | CoreLocation when-in-use; flags via flagcdn |
@@ -66,6 +68,13 @@ edge fn returns 401 unauthorized. See `TESTING.md`.
 - Publish/verify Google OAuth consent screen (currently "testing" mode).
 - Age rating (17+) + legal review of player-name usage.
 
+## Push notifications — code complete, pending Apple config
+Backend (`10_push.sql` + `notify-message`) and the iOS client (registration, deep-link, unread
+badge) are built and pushed. **Goes live once you:** create an APNs Auth Key (`.p8`) in the Apple
+Developer portal, set the `APNS_*` + `PUSH_FUNCTION_SECRET` Edge Function secrets, and run the app
+on a device. APNs env starts as **sandbox** (dev); switch the entitlement + `APNS_ENV` to
+**production** for TestFlight/App Store. See README → "Push notifications".
+
 ## Not built (intentional MVP scope)
-Group chats, attachments, read receipts, push notifications, maps view, server-side geo,
+Group chats, attachments, read receipts, maps view, server-side geo,
 Android client (architecture noted in README).

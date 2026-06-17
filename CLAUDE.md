@@ -61,9 +61,13 @@ GitHub (public) at **`enoyola/FootballSwap`**.
 ## Backend (Supabase)
 - Project ref **`hyfrnjtbcnlrwkwwjpbx`**, reachable via the **Supabase MCP** (apply_migration,
   execute_sql, get_advisors, deploy_edge_function, get_logs, …).
-- SQL lives in `supabase/01..08_*.sql` + `functions/delete-account/`. **Apply via MCP migrations
-  AND mirror the same SQL into the repo file.** RLS is enabled on every table; blocking is enforced
-  in `posts`/`conversations` select policies. Run `get_advisors(security)` after DDL.
+- SQL lives in `supabase/01..10_*.sql` + `functions/{delete-account,notify-message}/`. **Apply via
+  MCP migrations AND mirror the same SQL into the repo file.** RLS is enabled on every table; blocking
+  is enforced in `posts`/`conversations` select policies. Run `get_advisors(security)` after DDL.
+- Push: `messages` insert → `notify_new_message` trigger (pg_net) → `notify-message` Edge Function
+  → APNs. Function URL + shared secret are in **Vault** (`push_function_url`/`push_function_secret`);
+  APNs creds are **Edge Function secrets** (`APNS_*`). `notify-message` is `verify_jwt=false` (shared
+  secret instead). Device tokens live in `device_tokens`, written via the `register_device_token` RPC.
 
 ## Key gotchas
 - **Unsigned sim builds have no entitlements** → Keychain + Sign in with Apple fail. Hence
@@ -72,6 +76,9 @@ GitHub (public) at **`enoyola/FootballSwap`**.
 - **`simctl` location grant is flaky** → reset permission (`simctl privacy ... reset location`),
   let the in-app prompt grant it, and `simctl location ... set <lat>,<lon>`.
 - Album status is a **copies counter**: 0 = missing, 1 = have, 2+ = repeated (status derived).
+- **APNs sandbox vs production**: a dev/device-debug build (`aps-environment=development`) must use
+  the **sandbox** host (`APNS_ENV=sandbox`); TestFlight/App Store builds need both flipped to
+  **production** or pushes silently fail with `BadDeviceToken`.
 
 ## Status
 Feature-complete MVP; remaining work is App Store gating (Apple Developer enrollment pending —

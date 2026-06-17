@@ -6,5 +6,10 @@
 	<array>
 		<string>Default</string>
 	</array>
+	<!-- APNs. "development" for dev/device debug builds (sandbox APNs).
+	     Change to "production" for TestFlight/App Store archives and set
+	     APNS_ENV=production on the notify-message Edge Function. -->
+	<key>aps-environment</key>
+	<string>development</string>
 </dict>
 </plist>

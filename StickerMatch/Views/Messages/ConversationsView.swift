@@ -37,14 +37,11 @@ struct ConversationsView: View {
             )
         } else {
             List(viewModel.conversations) { conversation in
-                NavigationLink {
-                    ChatView(
-                        conversationId: conversation.id,
-                        currentUserId: userId,
-                        otherUserId: conversation.otherUserId(currentUserId: userId),
-                        title: conversation.otherNickname(currentUserId: userId)
-                    )
-                } label: {
+                NavigationLink(value: ChatRoute(
+                    conversationId: conversation.id,
+                    otherUserId: conversation.otherUserId(currentUserId: userId),
+                    title: conversation.otherNickname(currentUserId: userId)
+                )) {
                     ConversationRow(conversation: conversation, currentUserId: userId)
                 }
             }
