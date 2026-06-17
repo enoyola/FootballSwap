@@ -12,8 +12,12 @@ Deno.serve(async (req: Request) => {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "authorization, content-type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
   };
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
+  if (req.method !== "POST") {
+    return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405, headers: cors });
+  }
 
   const authHeader = req.headers.get("Authorization");
   if (!authHeader) {
@@ -37,7 +41,8 @@ Deno.serve(async (req: Request) => {
   const admin = createClient(supabaseUrl, serviceKey);
   const { error: delErr } = await admin.auth.admin.deleteUser(user.id);
   if (delErr) {
-    return new Response(JSON.stringify({ error: delErr.message }), { status: 500, headers: cors });
+    console.error("delete-account failed:", delErr.message); // detail logged server-side only
+    return new Response(JSON.stringify({ error: "Could not delete account" }), { status: 500, headers: cors });
   }
 
   return new Response(JSON.stringify({ success: true }), { status: 200, headers: cors });

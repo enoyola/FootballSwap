@@ -1,7 +1,7 @@
 # FootballSwap — App Store submission pack
 
 Reference for the App Store Connect listing + review. Not hosted; repo doc only.
-Replace `contact@zoniteai.com` with a real address you control before submitting.
+Support/contact email: `contact@zoniteai.com`.
 
 ## URLs (after enabling GitHub Pages on `main` → `/docs`)
 - **Privacy Policy:** `https://enoyola.github.io/FootballSwap/privacy.html`

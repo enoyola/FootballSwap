@@ -14,6 +14,11 @@ arrange trades through **in-app chat** — no phone numbers shared.
 
 No payments. Connections happen through in-app messaging; users can **block** and **report**.
 
+> **Visibility model:** trade posts are public to **all signed-in users** (minus anyone you've
+> blocked) and only while **active** — enforced server-side by RLS (`supabase/09_hardening2.sql`).
+> "Nearby" is a **client-side** distance sort for convenience, _not_ a privacy boundary — so a
+> post's meeting point/notes should never contain anything private.
+
 ---
 
 ## Tech stack

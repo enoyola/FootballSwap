@@ -21,7 +21,13 @@ struct ResilientAuthStorage: AuthLocalStorage {
         do {
             try keychain.store(key: key, value: value)
         } catch {
+            #if DEBUG
+            // Unsigned simulator/dev builds have no Keychain entitlement; fall back
+            // so OAuth/session still works. Release builds must NOT weaken storage.
             defaults.set(value, forKey: fallbackKey(key))
+            #else
+            throw error // fail closed: never persist session material in UserDefaults
+            #endif
         }
     }
 
@@ -29,11 +35,16 @@ struct ResilientAuthStorage: AuthLocalStorage {
         if let data = try? keychain.retrieve(key: key) {
             return data
         }
+        #if DEBUG
         return defaults.data(forKey: fallbackKey(key))
+        #else
+        return nil
+        #endif
     }
 
     func remove(key: String) throws {
         try? keychain.remove(key: key)
+        // Always clear any stale dev-fallback value (also scrubs it in Release).
         defaults.removeObject(forKey: fallbackKey(key))
     }
 }
