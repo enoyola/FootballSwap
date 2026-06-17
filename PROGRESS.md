@@ -68,12 +68,13 @@ edge fn returns 401 unauthorized. See `TESTING.md`.
 - Publish/verify Google OAuth consent screen (currently "testing" mode).
 - Age rating (17+) + legal review of player-name usage.
 
-## Push notifications — code complete, pending Apple config
+## Push notifications — ✅ live (verified 2026-06-17)
 Backend (`10_push.sql` + `notify-message`) and the iOS client (registration, deep-link, unread
-badge) are built and pushed. **Goes live once you:** create an APNs Auth Key (`.p8`) in the Apple
-Developer portal, set the `APNS_*` + `PUSH_FUNCTION_SECRET` Edge Function secrets, and run the app
-on a device. APNs env starts as **sandbox** (dev); switch the entitlement + `APNS_ENV` to
-**production** for TestFlight/App Store. See README → "Push notifications".
+badge) are live. **APNs delivery confirmed end-to-end** on a sandbox device build (HTTP 200,
+`sent:1`). APNs Auth Key `Y5P6SZD85G` (unrestricted env — a prior production-only key failed sandbox
+with `BadEnvironmentKeyInToken`). Edge secrets (`APNS_*`, `PUSH_FUNCTION_SECRET`) are set; the
+function **auto-falls back** between sandbox/production hosts and prunes only on `410 Unregistered`.
+**For TestFlight/App Store:** flip the `aps-environment` entitlement + `APNS_ENV` to `production`.
 
 ## Not built (intentional MVP scope)
 Group chats, attachments, read receipts, maps view, server-side geo,
