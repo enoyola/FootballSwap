@@ -153,7 +153,8 @@ chat still works, you just won't get a banner.
   team for its players. Real **flags**, global search, and a single **copies counter** per
   player (0 = missing, 1 = have, 2+ = repeated/spares). Status is derived from the count.
 - **Marketplace** — posts near you, **sorted by distance** with a radius control
-  (50/100/250 km / All); falls back to your **profile country** when location is off. Filter
+  (50/100/250 km / Country); the widest option scopes to your **country** (not global), and it
+  falls back to your **profile country** when location is off. Filter
   out your own posts; manage them under **My posts** (edit / swipe-to-delete). Each card has a
   **Message** button and the safety disclaimer.
 - **Matches** — your album vs. nearby posts: *they have X you need* / *you have Y they need*,

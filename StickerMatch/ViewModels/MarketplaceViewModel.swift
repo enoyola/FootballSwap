@@ -88,8 +88,11 @@ final class MarketplaceViewModel: ObservableObject {
 
         if hasLocation {
             if let maxMeters = radius.meters {
-                // Hide far posts; posts without coordinates only show under "All".
+                // Hide far posts; posts without coordinates only show under "Country".
                 result = result.filter { (distanceMeters(for: $0.post) ?? .greatestFiniteMagnitude) <= maxMeters }
+            } else if !myCountry.isEmpty {
+                // "Country" scope: everyone in my country (still sorted by distance below).
+                result = result.filter { $0.post.country == myCountry }
             }
             result.sort {
                 (distanceMeters(for: $0.post) ?? .greatestFiniteMagnitude)

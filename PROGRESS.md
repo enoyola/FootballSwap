@@ -44,7 +44,7 @@ XcodeGen (`project.yml`); `Info.plist`, `*.entitlements`, `PrivacyInfo.xcprivacy
 |------|--------|-------|
 | Auth | ✅ Google / ⚠️ Apple | Google OAuth working; Apple button scaffolded (needs paid program) |
 | Album | ✅ | Browse-by-team, flags, progress hero + rings, global search, **copies counter** (0/1/2+) |
-| Marketplace | ✅ | **Near-me** distance sort + radius (50/100/250/All), country fallback, My posts (edit/swipe-delete), Message button, excludes own |
+| Marketplace | ✅ | **Near-me** distance sort + radius (50/100/250/Country — widest is country-scoped, not global), country fallback, My posts (edit/swipe-delete), Message button, excludes own |
 | Matches | ✅ | Score-ranked ∩, distance-limited, Message button |
 | Messages | ✅ | Realtime 1:1 chat (RealtimeV2); **APNs push on new message** (tap deep-links to the chat) + unread tab badge; nicknames snapshotted |
 | Safety | ✅ | Block (RLS hides both ways) + Report (reason+note) from post/match/chat; Blocked-users mgmt |

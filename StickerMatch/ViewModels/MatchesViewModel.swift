@@ -82,7 +82,10 @@ final class MatchesViewModel: ObservableObject {
     /// Matches kept in score order, limited by radius (or country when location off).
     func filteredMatches() -> [Match] {
         if hasLocation {
-            guard let maxMeters = radius.meters else { return matches } // "All"
+            guard let maxMeters = radius.meters else {
+                // "Country" scope: matches anywhere in my country.
+                return myCountry.isEmpty ? matches : matches.filter { $0.post.country == myCountry }
+            }
             return matches.filter { (distanceMeters(for: $0) ?? .greatestFiniteMagnitude) <= maxMeters }
         } else if !myCountry.isEmpty {
             return matches.filter { $0.post.country == myCountry }
